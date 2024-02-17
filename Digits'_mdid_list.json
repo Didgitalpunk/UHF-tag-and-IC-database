@@ -1,0 +1,1148 @@
+{
+  "name": "EPC MDID list",
+  "publisher": "GS1 AISBL",
+  "version": "2023-11-03T08:57:00Z",
+  "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
+  "email": "MDID@gs1.org",
+  "registeredMaskDesigners": [
+    {
+      "mdid": "000000001",
+      "manufacturer": "Impinj",
+      "manufacturerUrl": "http://www.impinj.com/",
+      "chips": [
+        {
+          "tmnHex": "170",
+          "tmnBinary": "000101110000",
+          "modelName": "Monza R6-P",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/204793258-Monza-R6-P-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "10C",
+          "tmnBinary": "000100001100",
+          "modelName": "Monza 4E",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "105",
+          "tmnBinary": "000100000101",
+          "modelName": "Monza 4QT",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "160",
+          "tmnBinary": "000101100000",
+          "modelName": "Monza R6",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202765328-Monza-R6-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "130",
+          "tmnBinary": "000100110000",
+          "modelName": "Monza 5",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756948-Monza-5-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "191",
+          "tmnBinary": "000110010001",
+          "modelName": "M730",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M730-M750-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "190",
+          "tmnBinary": "000110010000",
+          "modelName": "M750",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M730-M750-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "171",
+          "tmnBinary": "000101110001",
+          "modelName": "Monza R6-A",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/115001376564-Monza-R6-A-Product-Brief-Datasheet",
+          "note": "Monza R6-A and Monza R6-B share the same tag model number. To distinguish the two tag chip varieties with the TID, the user must refer to the wafer mask revision value in Bits 30h-32h. Monza R6-A has a wafer mask revision value of 000b while Monza R6-B has a wafer mask revision value of 001b."
+        },
+        {
+          "tmnHex": "171",
+          "tmnBinary": "000101110001",
+          "modelName": "Monza R6-B",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360000690579-Monza-R6-B-Product-Brief-Datasheet",
+          "note": "Monza R6-A and Monza R6-B share the same tag model number. To distinguish the two tag chip varieties with the TID, the user must refer to the wafer mask revision value in Bits 30h-32h. Monza R6-A has a wafer mask revision value of 000b while Monza R6-B has a wafer mask revision value of 001b."
+        },
+        {
+          "tmnHex": "114",
+          "tmnBinary": "000100010100",
+          "modelName": "Monza 4i",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "100",
+          "tmnBinary": "000100000000",
+          "modelName": "Monza 4D",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "150",
+          "tmnBinary": "000101010000",
+          "modelName": "Monza X-8K",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756868-Monza-X-8K-Dura-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "140",
+          "tmnBinary": "000101000000",
+          "modelName": "Monza X-2K",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756848-Monza-X-2K-Dura-Product-Brief-Datasheet"
+        }
+      ]
+    },
+    {
+      "mdid": "000000010",
+      "manufacturer": "Texas Instruments ",
+      "manufacturerUrl": "http://www.ti.com/"
+    },
+    {
+      "mdid": "000000011",
+      "manufacturer": "Alien Technology",
+      "manufacturerUrl": "http://www.alientechnology.com/",
+      "chips": [
+        {
+          "tmnHex": "411",
+          "tmnBinary": "010000010001",
+          "modelName": "Higgs 2"
+        },
+        {
+          "tmnHex": "412",
+          "tmnBinary": "010000010010",
+          "modelName": "Higgs 3"
+        },
+        {
+          "tmnHex": "414",
+          "tmnBinary": "010000010100",
+          "modelName": "Higgs 4"
+        },
+        {
+          "tmnHex": "811",
+          "tmnBinary": "100000010001",
+          "modelName": "Higgs EC"
+        }
+      ]
+    },
+    {
+      "mdid": "000000100",
+      "manufacturer": "Intelleflex ",
+      "manufacturerUrl": "http://www.intelleflex.com/"
+    },
+    {
+      "mdid": "000000101",
+      "manufacturer": "Atmel ",
+      "manufacturerUrl": "http://www.atmel.com/"
+    },
+    {
+      "mdid": "000000110",
+      "manufacturer": "NXP Semiconductors ",
+      "manufacturerUrl": "http://www.nxp.com/#/homepage",
+      "chips": [
+        {
+          "tmnHex": "001",
+          "tmnBinary": "000000000001",
+          "modelName": "G2"
+        },
+        {
+          "tmnHex": "003",
+          "tmnBinary": "000000000011",
+          "modelName": "G2 XM"
+        },
+        {
+          "tmnHex": "004",
+          "tmnBinary": "000000000100",
+          "modelName": "G2 XL"
+        },
+        {
+          "tmnHex": "806",
+          "tmnBinary": "100000000110",
+          "modelName": "G2 iL"
+        },
+        {
+          "tmnHex": "807",
+          "tmnBinary": "100000000111",
+          "modelName": "G2 iL+"
+        },
+        {
+          "tmnHex": "80A",
+          "tmnBinary": "100000001010",
+          "modelName": "G2 iM"
+        },
+        {
+          "tmnHex": "80B",
+          "tmnBinary": "100000001011",
+          "modelName": "G2 iM+"
+        },
+        {
+          "tmnHex": "810",
+          "tmnBinary": "100000010000",
+          "modelName": "UCODE 7"
+        },
+        {
+          "tmnHex": "811",
+          "tmnBinary": "100000010001",
+          "modelName": "UCODE 7m"
+        },
+        {
+          "tmnHex": "812",
+          "tmnBinary": "100000010010",
+          "modelName": "UCODE 7xm"
+        },
+        {
+          "tmnHex": "D12",
+          "tmnBinary": "110100010010",
+          "modelName": "UCODE 7xm"
+        },
+        {
+          "tmnHex": "D92",
+          "tmnBinary": "110110010010",
+          "modelName": "UCODE 7xm+"
+        },
+        {
+          "tmnHex": "C12",
+          "tmnBinary": "110000010010",
+          "modelName": "UCODE DNA TRACK"
+        },
+        {
+          "tmnHex": "F92",
+          "tmnBinary": "111110010010",
+          "modelName": "UCODE DNA"
+        },
+        {
+          "tmnHex": "894",
+          "tmnBinary": "100010010100",
+          "modelName": "UCODE 8",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-uhf/ucode-8-8m:SL3S1205-15?&fsrch=1&sr=2&pageNum=1"
+        },
+                {
+          "tmnHex": "994",
+          "tmnBinary": "100110010100",
+          "modelName": "UCODE8m",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-uhf/ucode-8-8m:SL3S1205-15?&fsrch=1&sr=2&pageNum=1"
+        },
+        {
+          "tmnHex": "995",
+          "tmnBinary": "100110010101",
+          "modelName": "UCODE9"
+        }
+      ]
+    },
+    {
+      "mdid": "000000111",
+      "manufacturer": "ST Microelectronics ",
+      "manufacturerUrl": "http://www.st.com/",
+      "chips": [
+        {
+          "tmnHex": "240",
+          "tmnBinary": "001001000000",
+          "modelName": "XRAG2"
+        }
+      ]
+    },
+    {
+      "mdid": "000001000",
+      "manufacturer": "EP Microelectronics ",
+      "manufacturerUrl": "http://web-micfe.web.cern.ch/web-micfe/"
+    },
+    {
+      "mdid": "000001001",
+      "manufacturer": "Motorola (formerly Symbol Technologies)",
+      "manufacturerUrl": "http://www.zebra.com/us/en.html"
+    },
+    {
+      "mdid": "000001010",
+      "manufacturer": "Sentech Snd Bhd ",
+      "manufacturerUrl": "http://www.senstech.com.my/"
+    },
+    {
+      "mdid": "000001011",
+      "manufacturer": "EM Microelectronic ",
+      "manufacturerUrl": "http://www.emmicroelectronic.com/",
+      "chips": [
+        {
+          "tmnHex": "000",
+          "tmnBinary": "000000000000",
+          "modelName": "EM4324",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4324 "
+        },
+        {
+          "tmnHex": "001",
+          "tmnBinary": "000000000001",
+          "modelName": "EM4324",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4324 "
+        },
+        {
+          "tmnHex": "002",
+          "tmnBinary": "000000000010",
+          "modelName": "EM4324",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4324 "
+        },
+        {
+          "tmnHex": "003",
+          "tmnBinary": "000000000011",
+          "modelName": "EM4324",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4324 "
+        },
+        {
+          "tmnHex": "040",
+          "tmnBinary": "000001000000",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "041",
+          "tmnBinary": "000001000001",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "042",
+          "tmnBinary": "000001000010",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "043",
+          "tmnBinary": "000001000011",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "044",
+          "tmnBinary": "000001000100",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "045",
+          "tmnBinary": "000001000101",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "046",
+          "tmnBinary": "000001000110",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "047",
+          "tmnBinary": "000001000111",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "048",
+          "tmnBinary": "000001001000",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "049",
+          "tmnBinary": "000001001001",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04A",
+          "tmnBinary": "000001001010",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04B",
+          "tmnBinary": "000001001011",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04C",
+          "tmnBinary": "000001001100",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04D",
+          "tmnBinary": "000001001101",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04E",
+          "tmnBinary": "000001001110",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "04F",
+          "tmnBinary": "000001001111",
+          "modelName": "EM4325",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4325 "
+        },
+        {
+          "tmnHex": "080",
+          "tmnBinary": "000010000000",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "081",
+          "tmnBinary": "000010000001",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "082",
+          "tmnBinary": "000010000010",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "083",
+          "tmnBinary": "000010000011",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "084",
+          "tmnBinary": "000010000100",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "085",
+          "tmnBinary": "000010000101",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "086",
+          "tmnBinary": "000010000110",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "087",
+          "tmnBinary": "000010000111",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "088",
+          "tmnBinary": "000010001000",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "089",
+          "tmnBinary": "000010001001",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08A",
+          "tmnBinary": "000010001010",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08B",
+          "tmnBinary": "000010001011",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08C",
+          "tmnBinary": "000010001100",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08D",
+          "tmnBinary": "000010001101",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08E",
+          "tmnBinary": "000010001110",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "08F",
+          "tmnBinary": "000010001111",
+          "modelName": "EM4124",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4124 "
+        },
+        {
+          "tmnHex": "0A0",
+          "tmnBinary": "000010100000",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A1",
+          "tmnBinary": "000010100001",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A2",
+          "tmnBinary": "000010100010",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A3",
+          "tmnBinary": "000010100011",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A4",
+          "tmnBinary": "000010100100",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A5",
+          "tmnBinary": "000010100101",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A6",
+          "tmnBinary": "000010100110",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0A7",
+          "tmnBinary": "000010100111",
+          "modelName": "EM4423",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+        },
+        {
+          "tmnHex": "0C0",
+          "tmnBinary": "000011000000",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C1",
+          "tmnBinary": "000011000001",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C2",
+          "tmnBinary": "000011000010",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C3",
+          "tmnBinary": "000011000011",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C4",
+          "tmnBinary": "000011000100",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C5",
+          "tmnBinary": "000011000101",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C6",
+          "tmnBinary": "000011000110",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "0C7",
+          "tmnBinary": "000011000111",
+          "modelName": "EM4126",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em4126 "
+        },
+        {
+          "tmnHex": "100",
+          "tmnBinary": "000100000000",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "101",
+          "tmnBinary": "000100000001",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "102",
+          "tmnBinary": "000100000010",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "103",
+          "tmnBinary": "000100000011",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "104",
+          "tmnBinary": "000100000100",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "105",
+          "tmnBinary": "000100000101",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "106",
+          "tmnBinary": "000100000110",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "107",
+          "tmnBinary": "000100000111",
+          "modelName": "EM4227",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-c "
+        },
+        {
+          "tmnHex": "110",
+          "tmnBinary": "000100010000",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "111",
+          "tmnBinary": "000100010001",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "112",
+          "tmnBinary": "000100010010",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "113",
+          "tmnBinary": "000100010011",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "114",
+          "tmnBinary": "000100010100",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "115",
+          "tmnBinary": "000100010101",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "116",
+          "tmnBinary": "000100010110",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "117",
+          "tmnBinary": "000100010111",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "118",
+          "tmnBinary": "000100011000",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "119",
+          "tmnBinary": "000100011001",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11A",
+          "tmnBinary": "000100011010",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11B",
+          "tmnBinary": "000100011011",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11C",
+          "tmnBinary": "000100011100",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11D",
+          "tmnBinary": "000100011101",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11E",
+          "tmnBinary": "000100011110",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "11F",
+          "tmnBinary": "000100011111",
+          "modelName": "EM4425",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-v "
+        },
+        {
+          "tmnHex": "120",
+          "tmnBinary": "000100100000",
+          "modelName": "EM4152",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-sense "
+        },
+        {
+          "tmnHex": "121",
+          "tmnBinary": "000100100001",
+          "modelName": "EM4152",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-sense "
+        },
+        {
+          "tmnHex": "122",
+          "tmnBinary": "000100100010",
+          "modelName": "EM4152",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-sense "
+        },
+        {
+          "tmnHex": "123",
+          "tmnBinary": "000100100011",
+          "modelName": "EM4152",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-sense "
+        }
+    	]
+    },
+    {
+      "mdid": "000001100",
+      "manufacturer": "Renesas Technology Corp.",
+      "manufacturerUrl": "http://america.renesas.com/"
+    },
+    {
+      "mdid": "000001101",
+      "manufacturer": "Mstar",
+      "manufacturerUrl": "http://www.mstarsemi.com/"
+    },
+    {
+      "mdid": "000001110",
+      "manufacturer": "Tyco International",
+      "manufacturerUrl": "http://www.tyco.com/"
+    },
+    {
+      "mdid": "000001111",
+      "manufacturer": "Quanray Electronics",
+      "manufacturerUrl": "http://www.quanray.com/en/home.asp"
+    },
+    {
+      "mdid": "000010000",
+      "manufacturer": "Fujitsu",
+      "manufacturerUrl": "http://www.fujitsu.com/"
+    },
+    {
+      "mdid": "000010001",
+      "manufacturer": "LSIS",
+      "manufacturerUrl": "http://eng.lsis.biz/"
+    },
+    {
+      "mdid": "000010010",
+      "manufacturer": "CAEN RFID srl",
+      "manufacturerUrl": "http://www.caenrfid.it/"
+    },
+    {
+      "mdid": "000010011",
+      "manufacturer": "Productivity Engineering Gesellschaft fuer IC Design mbH",
+      "manufacturerUrl": "http://www.pe-gmbh.com/"
+    },
+    {
+      "mdid": "000010100",
+      "manufacturer": "Federal Electric Corp.",
+      "manufacturerUrl": "http://www.fec-corp.com/en/index.php"
+    },
+    {
+      "mdid": "000010101",
+      "manufacturer": "ON Semiconductor",
+      "manufacturerUrl": "http://www.onsemi.com/"
+    },
+    {
+      "mdid": "000010110",
+      "manufacturer": "Ramtron",
+      "manufacturerUrl": "http://www.ramtron.com/"
+    },
+    {
+      "mdid": "000010111",
+      "manufacturer": "Tego",
+      "manufacturerUrl": "http://www.tegoinc.com/"
+    },
+    {
+      "mdid": "000011000",
+      "manufacturer": "Ceitec S.A.",
+      "manufacturerUrl": "http://www.ceitec-sa.com/en/home/"
+    },
+    {
+      "mdid": "000011001",
+      "manufacturer": "CPA Wernher von Braun",
+      "manufacturerUrl": "http://www.vonbraunlabs.com.br/en/"
+    },
+    {
+      "mdid": "000011010",
+      "manufacturer": "TransCore",
+      "manufacturerUrl": "http://www.transcore.com/"
+    },
+    {
+      "mdid": "000011011",
+      "manufacturer": "Nationz",
+      "manufacturerUrl": "http://www.nationz.com.cn/"
+    },
+    {
+      "mdid": "000011100",
+      "manufacturer": "Invengo",
+      "manufacturerUrl": "http://www.invengo.com/"
+    },
+    {
+      "mdid": "000011101",
+      "manufacturer": "Kiloway",
+      "manufacturerUrl": "http://www.kiloway.com/"
+    },
+    {
+      "mdid": "000011110",
+      "manufacturer": "Longjing Microelectronics Co. Ltd.",
+      "manufacturerUrl": "http://www.szlongjing.com/"
+    },
+    {
+      "mdid": "000011111",
+      "manufacturer": "Chipus Microelectronics",
+      "manufacturerUrl": "http://www.chipus-ip.com/"
+    },
+    {
+      "mdid": "000100000",
+      "manufacturer": "ORIDAO",
+      "manufacturerUrl": "http://www.oridao.com/"
+    },
+    {
+      "mdid": "000100001",
+      "manufacturer": "Maintag",
+      "manufacturerUrl": "http://www.maintag.com/"
+    },
+    {
+      "mdid": "000100010",
+      "manufacturer": "Yangzhou Daoyuan Microelectronics Co. Ltd",
+      "manufacturerUrl": "http://www.daoyuanmicro.com/"
+    },
+    {
+      "mdid": "000100011",
+      "manufacturer": "Gate Elektronik",
+      "manufacturerUrl": "http://www.gateelektronik.com.tr/"
+    },
+    {
+      "mdid": "000100100",
+      "manufacturer": "RFMicron, Inc.",
+      "manufacturerUrl": "http://www.rfmicron.com/"
+    },
+    {
+      "mdid": "000100101",
+      "manufacturer": "RST-Invent LLC",
+      "manufacturerUrl": "http://www.rst-invent.com/"
+    },
+    {
+      "mdid": "000100110",
+      "manufacturer": "Crystone Technology",
+      "manufacturerUrl": "http://www.crystonetech.com/"
+    },
+    {
+      "mdid": "000100111",
+      "manufacturer": "Shanghai Fudan Microelectronics Group ",
+      "manufacturerUrl": "http://www.fmsh.com/eng/"
+    },
+    {
+      "mdid": "000101000",
+      "manufacturer": "Farsens",
+      "manufacturerUrl": "http://www.farsens.com/"
+    },
+    {
+      "mdid": "000101001",
+      "manufacturer": "Giesecke & Devrient GmbH",
+      "manufacturerUrl": "http://www.gi-de.com/"
+    },
+    {
+      "mdid": "000101010",
+      "manufacturer": "AWID",
+      "manufacturerUrl": "http://www.awid.com/"
+    },
+    {
+      "mdid": "000101011",
+      "manufacturer": "Unitec Semicondutores S/A",
+      "manufacturerUrl": "http://www.unitecgroup.net/"
+    },
+    {
+      "mdid": "000101100",
+      "manufacturer": "Q-Free ASA",
+      "manufacturerUrl": "https://www.q-free.com/"
+    },
+    {
+      "mdid": "000101101",
+      "manufacturer": "Valid S.A.",
+      "manufacturerUrl": "http://www.valid.com/"
+    },
+    {
+      "mdid": "000101110",
+      "manufacturer": "Fraunhofer IPMS",
+      "manufacturerUrl": "http://www.ipms.fraunhofer.de/"
+    },
+    {
+      "mdid": "000101111",
+      "manufacturer": "ams AG",
+      "manufacturerUrl": "http://www.ams.com/"
+    },
+    {
+      "mdid": "000110000",
+      "manufacturer": "Angstrem JSC",
+      "manufacturerUrl": "http://www.angstrem.ru/"
+    },
+    {
+      "mdid": "000110001",
+      "manufacturer": "Honeywell",
+      "manufacturerUrl": "http://www.honeywell.com/",
+      "chips": [
+        {
+          "tmnHex": "000",
+          "tmnBinary": "000000000000",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "001",
+          "tmnBinary": "000000000001",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "002",
+          "tmnBinary": "000000000010",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "003",
+          "tmnBinary": "000000000011",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "004",
+          "tmnBinary": "000000000100",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "005",
+          "tmnBinary": "000000000101",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "006",
+          "tmnBinary": "000000000110",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "007",
+          "tmnBinary": "000000000111",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "008",
+          "tmnBinary": "000000001000",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "009",
+          "tmnBinary": "000000001001",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00A",
+          "tmnBinary": "000000001010",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00B",
+          "tmnBinary": "000000001011",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00C",
+          "tmnBinary": "000000001100",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00D",
+          "tmnBinary": "000000001101",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00E",
+          "tmnBinary": "000000001110",
+          "modelName": "IT70"
+        },
+        {
+          "tmnHex": "00F",
+          "tmnBinary": "000000001111",
+          "modelName": "IT70"
+        }
+      ]
+    },
+    {
+      "mdid": "000110010",
+      "manufacturer": "Huada Semiconductor Co. Ltd (HDSC)",
+      "manufacturerUrl": "http://www.hdsc.com.cn/"
+    },
+    {
+      "mdid": "000110011",
+      "manufacturer": "Lapis Technology Co., Ltd.",
+      "manufacturerUrl": "https://www.lapis-tech.com/en/"
+    },
+    {
+      "mdid": "000110100",
+      "manufacturer": "PJSC Mikron",
+      "manufacturerUrl": "http://mikron.ru/en/"
+    },
+    {
+      "mdid": "000110101",
+      "manufacturer": "Hangzhou Landa Microelectronics Co., Ltd.",
+      "manufacturerUrl": "http://www.landsemi.com/ "
+    },
+    {
+      "mdid": "000110110",
+      "manufacturer": "Nanjing NARI Micro-Electronic Technology Co., Ltd.",
+      "manufacturerUrl": "http://www.sgepri.sgcc.com.cn/ "
+    },
+    {
+      "mdid": "000110111",
+      "manufacturer": "Southwest Integrated Circuit design Co., Ltd.",
+      "manufacturerUrl": "http://www.swid.com.cn "
+    },
+    {
+      "mdid": "000111000",
+      "manufacturer": "Silictec",
+      "manufacturerUrl": "http://www.silictec.com/"
+    },
+    {
+      "mdid": "000111001",
+      "manufacturer": "Nation RFID",
+      "manufacturerUrl": "http://www.nationrfid.com/"
+    },
+    {
+      "mdid": "000111010",
+      "manufacturer": "Asygn",
+      "manufacturerUrl": "http://www.asygn.com/"
+    },
+    {
+      "mdid": "000111011",
+      "manufacturer": "Suzhou HCTech Technology Co., Ltd.",
+      "manufacturerUrl": "http://www.hctechgroup.com/"
+    },
+    {
+      "mdid": "000111100",
+      "manufacturer": "AXEM Technology",
+      "manufacturerUrl": "https://www.axemtec.com"
+    },
+    {
+      "mdid": "000111101",
+      "manufacturer": "Guangzhou Syschip Technology Co., Ltd",
+      "manufacturerUrl": "http://www.syschip.com"
+    },
+    {
+      "mdid": "000111110",
+      "manufacturer": "MaxWave Microelectronics Ltd.",
+      "manufacturerUrl": "https://www.maxwavemicro.com"
+    },
+    {
+      "mdid": "000111111",
+      "manufacturer": "IDRO Co., Ltd",
+      "manufacturerUrl": "www.idro.co.kr"
+    },
+        {
+      "mdid": "001000000",
+      "manufacturer": "Shanxi Zhongshuo Microelectronics Co., Ltd.",
+      "manufacturerUrl": "http://www.zsmicro.com.cn"
+    },
+            {
+      "mdid": "001000001",
+      "manufacturer": "Beijing Smartchip Microelectronics Technology Company Limited",
+      "manufacturerUrl": "http://www.sgitg.sgcc.com.cn"
+    },
+                {
+      "mdid": "001000010",
+      "manufacturer": "Shanghai Yilian Internet of Things Co., Ltd.",
+      "manufacturerUrl": "http://www.ilian-tsp.cn"
+    },
+                    {
+      "mdid": "001000011",
+      "manufacturer": "T-Head Semiconductor Co., Ltd.",
+      "manufacturerUrl": "https://www.t-head.cn"
+    },
+                   {
+      "mdid": "001000100",
+      "manufacturer": "P&M Information Technology (Shenzhen) Co.,Ltd.",
+      "manufacturerUrl": "http://www.pmtechsz.com/"
+    },
+                       {
+      "mdid": "001000101",
+      "manufacturer": "Brompton Technologies Pte Ltd.",
+      "manufacturerUrl": "https://brompton.tech"
+    },
+                           {
+      "mdid": "001000110",
+      "manufacturer": "Along Star Technology (Hangzhou) Co., Ltd.",
+      "manufacturerUrl": "https://www.alongstar.com/"
+          },
+                       {
+      "mdid": "001000111",
+      "manufacturer": "3ALogics Inc.",
+      "manufacturerUrl": "http://www.3alogics.com/"
+    },
+                           {
+      "mdid": "001001000",
+      "manufacturer": "Onecent Technology (Singapore) Pte. Ltd.",
+      "manufacturerUrl": "https://www.1cent.sg"
+    },
+     {
+          "mdid": "001001001",
+      "manufacturer": "Silicon Craft Technology Public Company Limited",
+      "manufacturerUrl": "https://www.sic.co.th/"
+    },
+         {
+          "mdid": "001001010",
+      "manufacturer": "Huada Evercore Co.,LTD",
+      "manufacturerUrl": "https://www.hdect.com.cn/"
+    },
+             {
+          "mdid": "001001011",
+      "manufacturer": "Shanghai MintSilicon Microelectronics Inc.",
+      "manufacturerUrl": "http://www.mintsilicon.com/"
+    }
+  ]
+}
