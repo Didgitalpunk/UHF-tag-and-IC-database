@@ -195,42 +195,64 @@
         {
           "tmnHex": "003",
           "tmnBinary": "000000000011",
-          "modelName": "G2 XM"
+          "modelName": "G2 XM",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3ICS1002_1202.pdf"
         },
         {
           "tmnHex": "004",
           "tmnBinary": "000000000100",
-          "modelName": "G2 XL"
+          "modelName": "G2 XL",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3ICS1002_1202.pdf"
+        },
+        {
+          "tmnHex": "102",
+          "tmnBinary": "000100000010",
+          "modelName": "UCODE 5",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "160",
+          "tmnBinary": "000101100000",
+          "modelName": "UCODE 6",
+          "productUrl": "",
+          "note": ""
         },
         {
           "tmnHex": "806",
           "tmnBinary": "100000000110",
-          "modelName": "G2 iL"
+          "modelName": "G2 iL",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf"
         },
         {
           "tmnHex": "807",
           "tmnBinary": "100000000111",
-          "modelName": "G2 iL+"
+          "modelName": "G2 iL+",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf"
         },
         {
           "tmnHex": "80A",
           "tmnBinary": "100000001010",
-          "modelName": "G2 iM"
+          "modelName": "G2 iM",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-g2im-and-g2im-plus:SL3S1003_1013"
         },
         {
           "tmnHex": "80B",
           "tmnBinary": "100000001011",
-          "modelName": "G2 iM+"
+          "modelName": "G2 iM+",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-g2im-and-g2im-plus:SL3S1003_1013"
         },
         {
           "tmnHex": "810",
           "tmnBinary": "100000010000",
-          "modelName": "UCODE 7"
+          "modelName": "UCODE 7",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1204.pdf"
         },
         {
           "tmnHex": "811",
           "tmnBinary": "100000010001",
-          "modelName": "UCODE 7m"
+          "modelName": "UCODE 7m",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1214.pdf"
         },
         {
           "tmnHex": "812",
@@ -238,41 +260,116 @@
           "modelName": "UCODE 7xm"
         },
         {
-          "tmnHex": "D12",
-          "tmnBinary": "110100010010",
-          "modelName": "UCODE 7xm"
+          "tmnHex": "890",
+          "tmnBinary": "100010010000",
+          "modelName": "UCODE 7",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1204.pdf",
+          "note": ""
         },
         {
-          "tmnHex": "D92",
-          "tmnBinary": "110110010010",
-          "modelName": "UCODE 7xm+"
+          "tmnHex": "891",
+          "tmnBinary": "100010010001",
+          "modelName": "UCODE 7m",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1214.pdf",
+          "note": ""
         },
         {
-          "tmnHex": "C12",
-          "tmnBinary": "110000010010",
-          "modelName": "UCODE DNA TRACK"
-        },
-        {
-          "tmnHex": "F92",
-          "tmnBinary": "111110010010",
-          "modelName": "UCODE DNA"
+          "tmnHex": "892",
+          "tmnBinary": "100010010010",
+          "modelName": "UCODE DNA",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-dna-uhf-tag-ic-for-secure-authentication:SL3S5002N0FUD",
+          "note": ""
         },
         {
           "tmnHex": "894",
           "tmnBinary": "100010010100",
           "modelName": "UCODE 8",
-          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-uhf/ucode-8-8m:SL3S1205-15?&fsrch=1&sr=2&pageNum=1"
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-8-8m:SL3S1205-15"
         },
-                {
+        {
+          "tmnHex": "906",
+          "tmnBinary": "100100000110",
+          "modelName": "G2 iL",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf",
+          "note": ""
+        },
+        {
+          "tmnHex": "907",
+          "tmnBinary": "100100000111",
+          "modelName": "G2 iL+",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf",
+          "note": ""
+        },
+        {
           "tmnHex": "994",
           "tmnBinary": "100110010100",
-          "modelName": "UCODE8m",
-          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-uhf/ucode-8-8m:SL3S1205-15?&fsrch=1&sr=2&pageNum=1"
+          "modelName": "UCODE 8m",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-8-8m:SL3S1205-15"
         },
         {
           "tmnHex": "995",
           "tmnBinary": "100110010101",
-          "modelName": "UCODE9"
+          "modelName": "UCODE 9",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9-accelerates-the-iot:SL3S1206FUD2"
+        },
+        {
+          "tmnHex": "B06",
+          "tmnBinary": "10110000110",
+          "modelName": "G2 iL",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf",
+          "note": ""
+        },
+        {
+          "tmnHex": "B07",
+          "tmnBinary": "101100000111",
+          "modelName": "G2 iL+",
+          "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf",
+          "note": ""
+        },
+        {
+          "tmnHex": "C12",
+          "tmnBinary": "110000010010",
+          "modelName": "UCODE DNA TRACK",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-dna-track:SL3S5050N0FUD"
+        },
+        {
+          "tmnHex": "D12",
+          "tmnBinary": "110100010010",
+          "modelName": "UCODE 7xm-1k",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-7xm-1k-7xm-2k-and-7xm-plus:SL3S1004_1014"
+        },
+        {
+          "tmnHex": "D92",
+          "tmnBinary": "110110010010",
+          "modelName": "UCODE 7xm+",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-7xm-1k-7xm-2k-and-7xm-plus:SL3S1004_1014"
+        },
+        {
+          "tmnHex": "F12",
+          "tmnBinary": "111100010010",
+          "modelName": "UCODE 7xm-2k",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-7xm-1k-7xm-2k-and-7xm-plus:SL3S1004_1014",
+          "note": ""
+        },
+        {
+          "tmnHex": "F92",
+          "tmnBinary": "111110010010",
+          "modelName": "UCODE DNA",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-dna-uhf-tag-ic-for-secure-authentication:SL3S5002N0FUD"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "UCODE 9xm",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xm-accelerating-industrial-tagging-with-configurable-memory-and-high-performance:UCODE-9xm",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "UCODE 9xe",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xe-ucode-9-with-more-epc-memory:UCODE-9xe",
+          "note": ""
         }
       ]
     },
