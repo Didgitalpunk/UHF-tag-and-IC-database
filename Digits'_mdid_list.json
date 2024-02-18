@@ -381,7 +381,8 @@
         {
           "tmnHex": "240",
           "tmnBinary": "001001000000",
-          "modelName": "XRAG2"
+          "modelName": "XRAG2",
+          "productUrl": "https://www.st.com/resource/en/datasheet/xrag2.pdf"
         }
       ]
     },
@@ -1229,63 +1230,63 @@
       "manufacturer": "IDRO Co., Ltd",
       "manufacturerUrl": "www.idro.co.kr"
     },
-        {
+    {
       "mdid": "001000000",
       "manufacturer": "Shanxi Zhongshuo Microelectronics Co., Ltd.",
       "manufacturerUrl": "http://www.zsmicro.com.cn"
     },
-            {
+    {
       "mdid": "001000001",
       "manufacturer": "Beijing Smartchip Microelectronics Technology Company Limited",
       "manufacturerUrl": "http://www.sgitg.sgcc.com.cn"
     },
-                {
+    {
       "mdid": "001000010",
       "manufacturer": "Shanghai Yilian Internet of Things Co., Ltd.",
       "manufacturerUrl": "http://www.ilian-tsp.cn"
     },
-                    {
+    {
       "mdid": "001000011",
       "manufacturer": "T-Head Semiconductor Co., Ltd.",
       "manufacturerUrl": "https://www.t-head.cn"
     },
-                   {
+    {
       "mdid": "001000100",
       "manufacturer": "P&M Information Technology (Shenzhen) Co.,Ltd.",
       "manufacturerUrl": "http://www.pmtechsz.com/"
     },
-                       {
+    {
       "mdid": "001000101",
       "manufacturer": "Brompton Technologies Pte Ltd.",
       "manufacturerUrl": "https://brompton.tech"
     },
-                           {
+    {
       "mdid": "001000110",
       "manufacturer": "Along Star Technology (Hangzhou) Co., Ltd.",
       "manufacturerUrl": "https://www.alongstar.com/"
-          },
-                       {
+    },
+    {
       "mdid": "001000111",
       "manufacturer": "3ALogics Inc.",
       "manufacturerUrl": "http://www.3alogics.com/"
     },
-                           {
+    {
       "mdid": "001001000",
       "manufacturer": "Onecent Technology (Singapore) Pte. Ltd.",
       "manufacturerUrl": "https://www.1cent.sg"
     },
-     {
-          "mdid": "001001001",
+    {
+      "mdid": "001001001",
       "manufacturer": "Silicon Craft Technology Public Company Limited",
       "manufacturerUrl": "https://www.sic.co.th/"
     },
-         {
-          "mdid": "001001010",
+    {
+      "mdid": "001001010",
       "manufacturer": "Huada Evercore Co.,LTD",
       "manufacturerUrl": "https://www.hdect.com.cn/"
     },
-             {
-          "mdid": "001001011",
+    {
+      "mdid": "001001011",
       "manufacturer": "Shanghai MintSilicon Microelectronics Inc.",
       "manufacturerUrl": "http://www.mintsilicon.com/"
     }
