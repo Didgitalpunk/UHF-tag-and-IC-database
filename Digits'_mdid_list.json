@@ -1,6 +1,6 @@
 {
   "name": "EPC MDID list",
-  "publisher": "GS1 AISBL",
+  "publisher": "Digits",
   "version": "2023-11-03T08:57:00Z",
   "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
   "email": "MDID@gs1.org",
@@ -11,15 +11,9 @@
       "manufacturerUrl": "http://www.impinj.com/",
       "chips": [
         {
-          "tmnHex": "170",
-          "tmnBinary": "000101110000",
-          "modelName": "Monza R6-P",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/204793258-Monza-R6-P-Product-Brief-Datasheet"
-        },
-        {
-          "tmnHex": "10C",
-          "tmnBinary": "000100001100",
-          "modelName": "Monza 4E",
+          "tmnHex": "100",
+          "tmnBinary": "000100000000",
+          "modelName": "Monza 4D",
           "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
         },
         {
@@ -29,10 +23,16 @@
           "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
         },
         {
-          "tmnHex": "160",
-          "tmnBinary": "000101100000",
-          "modelName": "Monza R6",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/202765328-Monza-R6-Product-Brief-Datasheet"
+          "tmnHex": "10C",
+          "tmnBinary": "000100001100",
+          "modelName": "Monza 4E",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+        },
+        {
+          "tmnHex": "114",
+          "tmnBinary": "000100010100",
+          "modelName": "Monza 4i",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
         },
         {
           "tmnHex": "130",
@@ -41,16 +41,28 @@
           "productUrl": "https://support.impinj.com/hc/en-us/articles/202756948-Monza-5-Tag-Chip-Datasheet"
         },
         {
-          "tmnHex": "191",
-          "tmnBinary": "000110010001",
-          "modelName": "M730",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M730-M750-Product-Brief-Datasheet"
+          "tmnHex": "140",
+          "tmnBinary": "000101000000",
+          "modelName": "Monza X-2K",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756848-Monza-X-2K-Dura-Product-Brief-Datasheet"
         },
         {
-          "tmnHex": "190",
-          "tmnBinary": "000110010000",
-          "modelName": "M750",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M730-M750-Product-Brief-Datasheet"
+          "tmnHex": "150",
+          "tmnBinary": "000101010000",
+          "modelName": "Monza X-8K",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756868-Monza-X-8K-Dura-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "160",
+          "tmnBinary": "000101100000",
+          "modelName": "Monza R6",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/202765328-Monza-R6-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "170",
+          "tmnBinary": "000101110000",
+          "modelName": "Monza R6-P",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/204793258-Monza-R6-P-Product-Brief-Datasheet"
         },
         {
           "tmnHex": "171",
@@ -67,28 +79,54 @@
           "note": "Monza R6-A and Monza R6-B share the same tag model number. To distinguish the two tag chip varieties with the TID, the user must refer to the wafer mask revision value in Bits 30h-32h. Monza R6-A has a wafer mask revision value of 000b while Monza R6-B has a wafer mask revision value of 001b."
         },
         {
-          "tmnHex": "114",
-          "tmnBinary": "000100010100",
-          "modelName": "Monza 4i",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+          "tmnHex": "190",
+          "tmnBinary": "000110010000",
+          "modelName": "M750",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M700-Series-Tag-Chips-Product-Brief-Datasheet"
         },
         {
-          "tmnHex": "100",
-          "tmnBinary": "000100000000",
-          "modelName": "Monza 4D",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756908-Monza-4-RFID-Tag-Chip-Datasheet"
+          "tmnHex": "191",
+          "tmnBinary": "000110010001",
+          "modelName": "M730",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M700-Series-Tag-Chips-Product-Brief-Datasheet"
         },
         {
-          "tmnHex": "150",
-          "tmnBinary": "000101010000",
-          "modelName": "Monza X-8K",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756868-Monza-X-8K-Dura-Product-Brief-Datasheet"
+          "tmnHex": "1A0",
+          "tmnBinary": "000110100000",
+          "modelName": "M770",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/360010797539-Impinj-M700-Series-Tag-Chips-Product-Brief-Datasheet"
         },
         {
-          "tmnHex": "140",
-          "tmnBinary": "000101000000",
-          "modelName": "Monza X-2K",
-          "productUrl": "https://support.impinj.com/hc/en-us/articles/202756848-Monza-X-2K-Dura-Product-Brief-Datasheet"
+          "tmnHex": "1A2",
+          "tmnBinary": "000110100010",
+          "modelName": "M775",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/9726381874195-Impinj-M775-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "1B0",
+          "tmnBinary": "000110110000",
+          "modelName": "M830",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/17197826632979-Impinj-M800-Series-Tag-Chips-Product-Brief-Datasheet",
+          "note": "M830 and M850 share the same tag model number. To distinguish the two tag chip varieties with the TID, the user must refer to the quantity of EPC memory. M830 has 128 bits while M850 has 96 bits"
+        },
+        {
+          "tmnHex": "1B0",
+          "tmnBinary": "000110110000",
+          "modelName": "M850",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/17197826632979-Impinj-M800-Series-Tag-Chips-Product-Brief-Datasheet",
+          "note": "M830 and M850 share the same tag model number. To distinguish the two tag chip varieties with the TID, the user must refer to the quantity of EPC memory. M830 has 128 bits while M850 has 96 bits"
+        },
+        {
+          "tmnHex": "1C0",
+          "tmnBinary": "000111000000",
+          "modelName": "M780",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/11089868842387-Impinj-M700-Series-Tag-Chips-with-Extended-Memory-Product-Brief-Datasheet"
+        },
+        {
+          "tmnHex": "1C1",
+          "tmnBinary": "000111000001",
+          "modelName": "M781",
+          "productUrl": "https://support.impinj.com/hc/en-us/articles/11089868842387-Impinj-M700-Series-Tag-Chips-with-Extended-Memory-Product-Brief-Datasheet"
         }
       ]
     },
