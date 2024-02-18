@@ -1,7 +1,7 @@
 {
   "name": "EPC MDID list",
   "publisher": "Digits",
-  "version": "2023-11-03T08:57:00Z",
+  "version": "2024-02-18T01:16:00Z",
   "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
   "email": "MDID@gs1.org",
   "registeredMaskDesigners": [
@@ -159,6 +159,16 @@
           "tmnHex": "811",
           "tmnBinary": "100000010001",
           "modelName": "Higgs EC"
+        },
+        {
+          "tmnHex": "821",
+          "tmnBinary": "100000100001",
+          "modelName": "Higgs 9"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Higgs 10"
         }
       ]
     },
