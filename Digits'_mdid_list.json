@@ -1,7 +1,7 @@
 {
   "name": "EPC MDID list",
   "publisher": "Digits",
-  "version": "2024-02-18T01:16:00Z",
+  "version": "2024-02-18T02:57:00Z",
   "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
   "email": "MDID@gs1.org",
   "registeredMaskDesigners": [
@@ -1081,82 +1081,98 @@
         {
           "tmnHex": "000",
           "tmnBinary": "000000000000",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "001",
           "tmnBinary": "000000000001",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "002",
           "tmnBinary": "000000000010",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "003",
           "tmnBinary": "000000000011",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "004",
           "tmnBinary": "000000000100",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "005",
           "tmnBinary": "000000000101",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "006",
           "tmnBinary": "000000000110",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "007",
           "tmnBinary": "000000000111",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "008",
           "tmnBinary": "000000001000",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "009",
           "tmnBinary": "000000001001",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00A",
           "tmnBinary": "000000001010",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00B",
           "tmnBinary": "000000001011",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00C",
           "tmnBinary": "000000001100",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00D",
           "tmnBinary": "000000001101",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00E",
           "tmnBinary": "000000001110",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         },
         {
           "tmnHex": "00F",
           "tmnBinary": "000000001111",
-          "modelName": "IT70"
+          "modelName": "IT70",
+          "productUrl": "https://sps-support.honeywell.com/s/article/IT70-RFID-Tag-Specifications"
         }
       ]
     },
