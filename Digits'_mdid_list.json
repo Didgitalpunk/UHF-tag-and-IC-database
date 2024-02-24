@@ -976,7 +976,93 @@
     {
       "mdid": "000011101",
       "manufacturer": "Kiloway",
-      "manufacturerUrl": "http://www.kiloway.com/"
+      "manufacturerUrl": "https://www.kiloway.com/"
+      "chips"[
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-S",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-544/512",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-B",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BR",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BL",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BT",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-S",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-544",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-B",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "ONLY1",
+          "productUrl": "https://www.kiloway.com/product/142.html",
+          "note": "No TID or User memory"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "ONLY2",
+          "productUrl": "https://www.kiloway.com/product/142.html",
+          "note": "No TID or User memory"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KE2006",
+          "productUrl": "https://www.kiloway.com/product/112.html",
+          "note": ""
+        },
+      ]
     },
     {
       "mdid": "000011110",
@@ -1027,6 +1113,36 @@
       "mdid": "000100111",
       "manufacturer": "Shanghai Fudan Microelectronics Group ",
       "manufacturerUrl": "https://www.fm-chips.com/"
+      "chips":[
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13DT160",
+          "productUrl": "https://www.fm-chips.com/sensor.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF0051E",
+          "productUrl": "",
+          "note": "download link not active"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF011E",
+          "productUrl": "",
+          "note": "download link not active"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF011X",
+          "productUrl": "",
+          "note": "download link not active"
+        },
+      ]
     },
     {
       "mdid": "000101000",
