@@ -906,7 +906,72 @@
     {
       "mdid": "000001111",
       "manufacturer": "Quanray Electronics",
-      "manufacturerUrl": "http://www.quanray.com/en/home.asp"
+      "manufacturerUrl": "https://www.quanray.com/en/"
+      "chips":[
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5UTP-E",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5A",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=9",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5A-E",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=9",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-53",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-54",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-55",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-56",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-51",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5Z",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+      ]
     },
     {
       "mdid": "000010000",
