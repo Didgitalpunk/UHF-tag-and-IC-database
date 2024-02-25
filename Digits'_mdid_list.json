@@ -1042,7 +1042,7 @@
       "mdid": "000011101",
       "manufacturer": "Kiloway",
       "manufacturerUrl": "https://www.kiloway.com/"
-      "chips"[
+      "chips": [
         {
           "tmnHex": "",
           "tmnBinary": "",
@@ -1161,8 +1161,172 @@
     },
     {
       "mdid": "000100100",
-      "manufacturer": "RFMicron, Inc.",
-      "manufacturerUrl": "http://www.rfmicron.com/"
+      "manufacturer": "Axzon",
+      "manufacturerUrl": "https://www.axzon.com/index.html",
+      "note": "previously known as RFMicron, Inc. with http://www.rfmicron.com/ as website"
+      "chips": [
+        {
+          "tmnHex": "13B",
+          "tmnBinary": "000100111011",
+          "modelName": "Magnus-3LED",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus 3-D IC3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus 3-E IC3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S2",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3 M3D",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": "TMN is stated as xxxxxxxxx in datasheet"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3 M3E",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": "TMN is stated as xxxxxxxxx in datasheet"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Opus",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Xerxes X1",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3100",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3110",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3120",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3200",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3230",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3240",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3250-C",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3254-B",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3256",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3260",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3300",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3380",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3400",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN5200",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        }
+      ]
     },
     {
       "mdid": "000100101",
@@ -1206,7 +1370,7 @@
           "modelName": "FM13UF011X",
           "productUrl": "",
           "note": "download link not active"
-        },
+        }
       ]
     },
     {
