@@ -906,7 +906,142 @@
     {
       "mdid": "000001111",
       "manufacturer": "Quanray Electronics",
-      "manufacturerUrl": "http://www.quanray.com/en/home.asp"
+      "manufacturerUrl": "https://www.quanray.com/en/"
+      "chips":[
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5UTP-E",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5A",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=9",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5A-E",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=9",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-53",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-54",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-55",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-56",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=8",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-51",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-5Z",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=1",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-6S",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=108&id=13",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-6T",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=34",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-6X",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=108&id=36",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-71",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=35",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-73",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=35",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-73-V",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=35",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Qstar-7U",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=53",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "QMars-5U",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=107&id=12",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "QMars-5X",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=107&id=33",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "QMars-6X",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=107&id=54",
+          "note": ""
+        },
+      ]
     },
     {
       "mdid": "000010000",
@@ -976,7 +1111,93 @@
     {
       "mdid": "000011101",
       "manufacturer": "Kiloway",
-      "manufacturerUrl": "http://www.kiloway.com/"
+      "manufacturerUrl": "https://www.kiloway.com/"
+      "chips": [
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-S",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-544/512",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-B",
+          "productUrl": "https://www.kiloway.com/product/110.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BR",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BL",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005X-BT",
+          "productUrl": "https://www.kiloway.com/product/61.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-S",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-544",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KX2005XG-B",
+          "productUrl": "https://www.kiloway.com/product/111.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "ONLY1",
+          "productUrl": "https://www.kiloway.com/product/142.html",
+          "note": "No TID or User memory"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "ONLY2",
+          "productUrl": "https://www.kiloway.com/product/142.html",
+          "note": "No TID or User memory"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "KE2006",
+          "productUrl": "https://www.kiloway.com/product/112.html",
+          "note": ""
+        },
+      ]
     },
     {
       "mdid": "000011110",
@@ -1010,8 +1231,172 @@
     },
     {
       "mdid": "000100100",
-      "manufacturer": "RFMicron, Inc.",
-      "manufacturerUrl": "http://www.rfmicron.com/"
+      "manufacturer": "Axzon",
+      "manufacturerUrl": "https://www.axzon.com/index.html",
+      "note": "previously known as RFMicron, Inc. with http://www.rfmicron.com/ as website"
+      "chips": [
+        {
+          "tmnHex": "13B",
+          "tmnBinary": "000100111011",
+          "modelName": "Magnus-3LED",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus 3-D IC3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus 3-E IC3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S2",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3 M3D",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": "TMN is stated as xxxxxxxxx in datasheet"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Magnus-S3 M3E",
+          "productUrl": "https://www.axzon.com/packagedQFN.html",
+          "note": "TMN is stated as xxxxxxxxx in datasheet"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Opus",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "Xerxes X1",
+          "productUrl": "",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3100",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3110",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3120",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3200",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3230",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3240",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3250-C",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3254-B",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3256",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3260",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3300",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3380",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN3400",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "AZN5200",
+          "productUrl": "https://www.axzon.com/flexiblepeelnsticksensor.html",
+          "note": "tag, not IC"
+        }
+      ]
     },
     {
       "mdid": "000100101",
@@ -1026,7 +1411,37 @@
     {
       "mdid": "000100111",
       "manufacturer": "Shanghai Fudan Microelectronics Group ",
-      "manufacturerUrl": "http://www.fmsh.com/eng/"
+      "manufacturerUrl": "https://www.fm-chips.com/"
+      "chips":[
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13DT160",
+          "productUrl": "https://www.fm-chips.com/sensor.html",
+          "note": ""
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF0051E",
+          "productUrl": "",
+          "note": "download link not active"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF011E",
+          "productUrl": "",
+          "note": "download link not active"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "FM13UF011X",
+          "productUrl": "",
+          "note": "download link not active"
+        }
+      ]
     },
     {
       "mdid": "000101000",
