@@ -166,8 +166,8 @@
           "modelName": "Higgs 9"
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "813",
+          "tmnBinary": "100000010011",
           "modelName": "Higgs 10"
         }
       ]
@@ -365,8 +365,8 @@
           "note": ""
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "A16",
+          "tmnBinary": "101000010110",
           "modelName": "UCODE 9xe",
           "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xe-ucode-9-with-more-epc-memory:UCODE-9xe",
           "note": ""
@@ -906,7 +906,7 @@
     {
       "mdid": "000001111",
       "manufacturer": "Quanray Electronics",
-      "manufacturerUrl": "https://www.quanray.com/en/"
+      "manufacturerUrl": "https://www.quanray.com/en/",
       "chips":[
         {
           "tmnHex": "",
@@ -1007,6 +1007,13 @@
           "note": ""
         },
         {
+          "tmnHex": "336",
+          "tmnBinary": "001100110110",
+          "modelName": "Qstar-73 GB",
+          "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=106&id=35",
+          "note": ""
+        },
+        {
           "tmnHex": "",
           "tmnBinary": "",
           "modelName": "Qstar-73-V",
@@ -1040,7 +1047,7 @@
           "modelName": "QMars-6X",
           "productUrl": "https://www.quanray.com/index.php?m=content&c=index&a=show&catid=107&id=54",
           "note": ""
-        },
+        }
       ]
     },
     {
@@ -1111,7 +1118,7 @@
     {
       "mdid": "000011101",
       "manufacturer": "Kiloway",
-      "manufacturerUrl": "https://www.kiloway.com/"
+      "manufacturerUrl": "https://www.kiloway.com/",
       "chips": [
         {
           "tmnHex": "",
@@ -1142,15 +1149,15 @@
           "note": ""
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "016",
+          "tmnBinary": "000000010110",
           "modelName": "KX2005X-BL",
           "productUrl": "https://www.kiloway.com/product/61.html",
           "note": ""
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "011", 
+          "tmnBinary": "000000010001",
           "modelName": "KX2005X-BT",
           "productUrl": "https://www.kiloway.com/product/61.html",
           "note": ""
@@ -1196,7 +1203,7 @@
           "modelName": "KE2006",
           "productUrl": "https://www.kiloway.com/product/112.html",
           "note": ""
-        },
+        }
       ]
     },
     {
@@ -1233,7 +1240,7 @@
       "mdid": "000100100",
       "manufacturer": "Axzon",
       "manufacturerUrl": "https://www.axzon.com/index.html",
-      "note": "previously known as RFMicron, Inc. with http://www.rfmicron.com/ as website"
+      "note": "previously known as RFMicron, Inc. with http://www.rfmicron.com/ as website",
       "chips": [
         {
           "tmnHex": "13B",
@@ -1271,11 +1278,11 @@
           "note": ""
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "03D",
+          "tmnBinary": "000000111101",
           "modelName": "Magnus-S3 M3D",
           "productUrl": "https://www.axzon.com/packagedQFN.html",
-          "note": "TMN is stated as xxxxxxxxx in datasheet"
+          "note": "Temperature sensing tag"
         },
         {
           "tmnHex": "",
@@ -1411,7 +1418,7 @@
     {
       "mdid": "000100111",
       "manufacturer": "Shanghai Fudan Microelectronics Group ",
-      "manufacturerUrl": "https://www.fm-chips.com/"
+      "manufacturerUrl": "https://www.fm-chips.com/",
       "chips":[
         {
           "tmnHex": "",
@@ -1421,8 +1428,8 @@
           "note": ""
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "882",
+          "tmnBinary": "100010000010",
           "modelName": "FM13UF0051E",
           "productUrl": "",
           "note": "download link not active"
