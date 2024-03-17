@@ -1742,7 +1742,27 @@
     {
       "mdid": "001001011",
       "manufacturer": "Shanghai MintSilicon Microelectronics Inc.",
-      "manufacturerUrl": "http://www.mintsilicon.com/"
+      "manufacturerUrl": "http://www.mintsilicon.com/",
+      "chips": [
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "MU6",
+          "note": "ISO/IEC 18000-6C 	128bit EPC, 96bit TID, 64bit Password 	EPC C1 Gen2v2，ISO 18000-6C,兼容R6"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "MU6M",
+          "note": "ISO/IEC 18000-6C 	96bit EPC, 96bit TID, 64bit Password, 32bit User Memory 	EPC C1 Gen2v2，ISO 18000-6C,兼容R6P、U8M"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "MU6D",
+          "note": "ISO/IEC 18000-6C, I2C 	96bit EPC, 96bit TID, 64bit Password, 32bit User Memory 	ISO 18000-6C、RF和I2C双界面"
+        }
+      ]
     }
   ]
 }
