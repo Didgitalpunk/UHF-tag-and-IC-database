@@ -1684,8 +1684,7 @@
       "manufacturerUrl": "http://www.ilian-tsp.cn"
     },
     {
-      "mdidHex": "",
-      "mdidBinary": "001000011",
+      "mdid": "001000011",
       "manufacturer": "T-Head Semiconductor Co., Ltd.",
       "manufacturerUrl": "https://www.t-head.cn",
       "chips": [
