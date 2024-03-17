@@ -1684,9 +1684,24 @@
       "manufacturerUrl": "http://www.ilian-tsp.cn"
     },
     {
-      "mdid": "001000011",
+      "mdidHex": "",
+      "mdidBinary": "001000011",
       "manufacturer": "T-Head Semiconductor Co., Ltd.",
-      "manufacturerUrl": "https://www.t-head.cn"
+      "manufacturerUrl": "https://www.t-head.cn",
+      "chips": [
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "TH6100",
+          "note": "Yuzhen 600. TH6100 only supports the EPC area. Any command that uses the TID area, user area, or reserved area as a parameter will be considered invalid. Invalid commands do not change any state."
+        },
+        {
+          "tmnHex": "611",
+          "tmnBinary": "011000010001",
+          "modelName": "TH6101",
+          "note": "Yuzhen 611"
+        }
+      ]
     },
     {
       "mdid": "001000100",
