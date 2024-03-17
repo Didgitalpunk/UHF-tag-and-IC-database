@@ -1737,7 +1737,21 @@
     {
       "mdid": "001001010",
       "manufacturer": "Huada Evercore Co.,LTD",
-      "manufacturerUrl": "https://www.hdect.com.cn/"
+      "manufacturerUrl": "https://www.hdect.com.cn/",
+      "chips": [
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "CIT86256",
+          "note": "Comply with GB/T 29768-2013 Information technology radio frequency identification 800/900MHz air interface protocol"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "CIT86256A",
+          "note": "Comply with GB-T 35788-2017 Safety technical requirements for electronic identification of motor vehicles"
+        }
+      ]
     },
     {
       "mdid": "001001011",
