@@ -1214,17 +1214,19 @@
     {
       "mdid": "000011111",
       "manufacturer": "Chipus Microelectronics",
-      "manufacturerUrl": "http://www.chipus-ip.com/"
+      "manufacturerUrl": "https://www.chipus.com.br/"
     },
     {
       "mdid": "000100000",
       "manufacturer": "ORIDAO",
-      "manufacturerUrl": "http://www.oridao.com/"
+      "manufacturerUrl": "http://www.oridao.com/",
+      "note": "french company?, seems defunct since end of 2021"
     },
     {
       "mdid": "000100001",
       "manufacturer": "Maintag",
-      "manufacturerUrl": "http://www.maintag.com/"
+      "manufacturerUrl": "http://www.maintag.com/",
+      "note": "3/17/2024 website inaccessible. bought out by https://txcom-group.com/ in 2015"
     },
     {
       "mdid": "000100010",
