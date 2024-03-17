@@ -1707,17 +1707,20 @@
     {
       "mdid": "001000100",
       "manufacturer": "P&M Information Technology (Shenzhen) Co.,Ltd.",
-      "manufacturerUrl": "http://www.pmtechsz.com/"
+      "manufacturerUrl": "http://www.pmtechsz.com/",
+      "note": "3/17/2024 website inaccessible. Alibaba firewall?"
     },
     {
       "mdid": "001000101",
       "manufacturer": "Brompton Technologies Pte Ltd.",
-      "manufacturerUrl": "https://brompton.tech"
+      "manufacturerUrl": "https://brompton.tech",
+      "note": "0 info in website"
     },
     {
       "mdid": "001000110",
       "manufacturer": "Along Star Technology (Hangzhou) Co., Ltd.",
-      "manufacturerUrl": "https://www.alongstar.com/"
+      "manufacturerUrl": "https://www.alongstar.com/",
+      "note": "seems to specialise in wireless sensors. website is just a single page of pictures and text"
     },
     {
       "mdid": "001000111",
@@ -1727,7 +1730,8 @@
     {
       "mdid": "001001000",
       "manufacturer": "Onecent Technology (Singapore) Pte. Ltd.",
-      "manufacturerUrl": "https://www.1cent.sg"
+      "manufacturerUrl": "https://www.1cent.sg",
+      "note": "website doesn't lead to anything but a 'come back later' page"
     },
     {
       "mdid": "001001001",
