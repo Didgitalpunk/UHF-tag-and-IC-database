@@ -1608,82 +1608,132 @@
     {
       "mdid": "000110011",
       "manufacturer": "Lapis Technology Co., Ltd.",
-      "manufacturerUrl": "https://www.lapis-tech.com/en/"
+      "manufacturerUrl": "https://www.lapis-tech.com/en/",
+      "note": "part of the Rohm group",
+      "chips": [
+        {
+          "tmnHex": "805",
+          "tmnBinary": "100000000101",
+          "modelName": "MR7932",
+          "productUrl": "https://www.rohm.com/products/wireless-lsi/rfid/mr7930-product"
+        },
+        {
+          "tmnHex": "806",
+          "tmnBinary": "100000000110",
+          "modelName": "MR793200",
+          "productUrl": "https://www.rohm.com/products/wireless-lsi/rfid/mr793200gd-product"
+        }
+      ]
     },
     {
       "mdid": "000110100",
       "manufacturer": "PJSC Mikron",
-      "manufacturerUrl": "http://mikron.ru/en/"
+      "manufacturerUrl": "http://mikron.ru/en/",
+      "note": "website not found on 3/23/2024, https://www.tour.mikron.ru/ does work though"
     },
     {
       "mdid": "000110101",
       "manufacturer": "Hangzhou Landa Microelectronics Co., Ltd.",
-      "manufacturerUrl": "http://www.landsemi.com/ "
+      "manufacturerUrl": "http://www.landsemi.com/",
+      "note": "website not found on 3/23/2024"
     },
     {
       "mdid": "000110110",
       "manufacturer": "Nanjing NARI Micro-Electronic Technology Co., Ltd.",
-      "manufacturerUrl": "http://www.sgepri.sgcc.com.cn/ "
+      "manufacturerUrl": "http://www.sgepri.sgcc.com.cn/",
+      "note": "SGITG.SGCC -- similar companies both linked with china state grid"
     },
     {
       "mdid": "000110111",
       "manufacturer": "Southwest Integrated Circuit design Co., Ltd.",
-      "manufacturerUrl": "http://www.swid.com.cn "
+      "manufacturerUrl": "http://www.swid.com.cn"
     },
     {
       "mdid": "000111000",
       "manufacturer": "Silictec",
-      "manufacturerUrl": "http://www.silictec.com/"
+      "manufacturerUrl": "https://www.silictec.net/",
+      "note": "wierd blockchain RFID chips..."
     },
     {
       "mdid": "000111001",
       "manufacturer": "Nation RFID",
-      "manufacturerUrl": "http://www.nationrfid.com/"
+      "manufacturerUrl": "http://www.nationrfid.com/",
+      "note": "they make both tag ICs and reader modules and ICs"
     },
     {
       "mdid": "000111010",
       "manufacturer": "Asygn",
-      "manufacturerUrl": "http://www.asygn.com/"
+      "manufacturerUrl": "http://www.asygn.com/",
+      "note": "french company making UHF RFID RAIN compliant wireless sensors -- humidity, resistive and capacitive force, strain, ...-- no datasheets for download though"
     },
     {
       "mdid": "000111011",
       "manufacturer": "Suzhou HCTech Technology Co., Ltd.",
-      "manufacturerUrl": "http://www.hctechgroup.com/"
+      "manufacturerUrl": "http://www.hctechgroup.com/",
+      "note": "looks like a device integrator. seems to use exclusively EM microelectronic ICs"
     },
     {
       "mdid": "000111100",
       "manufacturer": "AXEM Technology",
-      "manufacturerUrl": "https://www.axemtec.com"
+      "manufacturerUrl": "https://www.axemtec.com",
+      "note": "make inlays, not ICs as far as I can tell. They make glass encapsulated tags for implants as well"
     },
     {
       "mdid": "000111101",
       "manufacturer": "Guangzhou Syschip Technology Co., Ltd",
-      "manufacturerUrl": "http://www.syschip.com"
+      "manufacturerUrl": "http://www.syschip.com",
+      "note": "website does not exist, https://corporate.murata.com/en-eu/company/muratalocations/affiliated_eastasia/sychip-electronictechnology-shanghai for contact info -- Address 11/Floor, 5 Corporate Avenue, 150 Hubin Road, Huangpu District, Shanghai 200021, China -- Tel +86 21 3635 5700 -- Fax +86 21 3635 5710"
     },
     {
       "mdid": "000111110",
       "manufacturer": "MaxWave Microelectronics Ltd.",
-      "manufacturerUrl": "https://www.maxwavemicro.com"
+      "manufacturerUrl": "https://www.maxwavemicro.com",
+      "note": "",
+      "chips": [
+        {
+          "tmnHex": "0D3",
+          "tmnBinary": "000011010011",
+          "modelName": "MW8112",
+          "note": "doesn't seem to be a way to differentiate between MW8112 and MW8112A, their datasheets seem identical too..."
+        },
+        {
+          "tmnHex": "0D3",
+          "tmnBinary": "000011010011",
+          "modelName": "MW8112A",
+          "note": "doesn't seem to be a way to differentiate between MW8112 and MW8112A, their datasheets seem identical too..."
+        },
+        {
+          "tmnHex": "0F1",
+          "tmnBinary": "000011110001",
+          "modelName": "MW8113",
+          "note": ""
+        }
+      ]
+
     },
     {
       "mdid": "000111111",
       "manufacturer": "IDRO Co., Ltd",
-      "manufacturerUrl": "www.idro.co.kr"
+      "manufacturerUrl": "www.idro.co.kr",
+      "note": "make 'visible' RFID tech (glowfly), rfid tags that work with light and not RF, as well as normal RFID stuff"
     },
     {
       "mdid": "001000000",
       "manufacturer": "Shanxi Zhongshuo Microelectronics Co., Ltd.",
-      "manufacturerUrl": "http://www.zsmicro.com.cn"
+      "manufacturerUrl": "http://www.zsmicro.com.cn",
+      "note": "site doesn't actually exist, only page is the page congratulating for the creation of the site"
     },
     {
       "mdid": "001000001",
       "manufacturer": "Beijing Smartchip Microelectronics Technology Company Limited",
-      "manufacturerUrl": "http://www.sgitg.sgcc.com.cn"
+      "manufacturerUrl": "http://www.sgitg.sgcc.com.cn",
+      "note": "SGEPRI.SGCC -- similar companies both linked with china state grid"
     },
     {
       "mdid": "001000010",
       "manufacturer": "Shanghai Yilian Internet of Things Co., Ltd.",
-      "manufacturerUrl": "http://www.ilian-tsp.cn"
+      "manufacturerUrl": "http://www.ilian-tsp.com",
+      "note": "temp sensor tags, normal tags, LED tags. sent them an email asking for datasheets on 3/19/2024"
     },
     {
       "mdid": "001000011",
