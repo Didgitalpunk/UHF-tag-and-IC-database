@@ -1,7 +1,7 @@
 {
   "name": "EPC MDID list",
   "publisher": "Digits",
-  "version": "2024-02-18T02:57:00Z",
+  "version": "2025-01-27T13:27:00Z",
   "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
   "email": "MDID@gs1.org",
   "registeredMaskDesigners": [
@@ -1831,6 +1831,26 @@
           "note": "ISO/IEC 18000-6C, I2C 	96bit EPC, 96bit TID, 64bit Password, 32bit User Memory 	ISO 18000-6C、RF和I2C双界面"
         }
       ]
+    },
+  	{
+      "mdid": "001001100",
+      "manufacturer": "Chongqing UCchip InfoTech Co., Ltd",
+      "manufacturerUrl": "http://www.ucchip.com"
+    },
+    {
+      "mdid": "001001101",
+      "manufacturer": "Itag Sistemas Inteligentes Ltda.",
+      "manufacturerUrl": "https://itagtecnologia.com.br/"
+  	},
+    {
+      "mdid": "001001110",
+      "manufacturer": "Smardust Technology",
+      "manufacturerUrl": "www.smardust.com"
+    },
+    {
+      "mdid": "001001111",
+      "manufacturer": "Guangdong Shixin Microelectronics Technology Co., Ltd.",
+      "manufacturerUrl": "https://gdsxwdz.com/"
     }
   ]
 }
