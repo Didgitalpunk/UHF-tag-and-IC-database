@@ -1,0 +1,179 @@
+import sys
+import json
+import re
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit
+from PyQt5.QtCore import Qt
+
+#place this program in the same folder as Digits'_mdid_list.json
+
+# Remove non-printable characters except spaces, newlines, and tabs
+def clean_json_data(raw_data):
+    return re.sub(r'[\x00-\x1F\x7F-\x9F]', '', raw_data)
+
+# Load JSON data
+def load_json_data():
+    try:
+        with open("Digits'_mdid_list.json", "r", encoding="utf-8") as file:
+            raw_data = file.read()
+            cleaned_data = clean_json_data(raw_data)  # Clean non-printable characters
+            data = json.loads(cleaned_data)  # Parse the cleaned JSON data
+            print("Data loaded successfully")
+            return data
+    except Exception as e:
+        print(f"ERROR decoding the JSON data: {e}")
+        return None
+
+# Decode the TID
+def extract_values(tid):
+    # Extract the first 8 bits (E2 in hex -> 11100010 in binary)
+    bin_tid = bin(int(tid, 16))[2:].zfill(32)  # Ensure we have a 32-bit binary string
+    
+    # Extract X, S, F values (next 3 bits)
+    X = bin_tid[8]
+    S = bin_tid[9]
+    F = bin_tid[10]
+    
+    # Extract MDID (next 9 bits)
+    MDID_binary = bin_tid[11:20]
+    
+    # Convert MDID to hex
+    MDID_hex = hex(int(MDID_binary, 2))[2:].zfill(3)  # Ensure we have 3-digit hex (e.g., '003')
+    
+    # Extract TMN (last 12 bits)
+    TMN_binary = bin_tid[20:32]
+    
+    # Convert TMN to hex
+    TMN_hex = hex(int(TMN_binary, 2))[2:].zfill(3)  # Ensure we have 3-digit hex (e.g., '411')
+    
+    return X, S, F, MDID_binary, MDID_hex, TMN_binary, TMN_hex
+
+# Main window
+class SearchWindow(QWidget):
+    def __init__(self, data):
+        super().__init__()
+
+        self.setWindowTitle("TID Search Engine")
+        self.setGeometry(100, 100, 600, 400)
+        
+        self.data = data
+        self.init_ui()
+
+    def init_ui(self):
+        # Layout
+        main_layout = QVBoxLayout()
+
+        # Instruction label
+        instruction_label = QLabel("Enter the first 8 characters of the TID (ex: E2xx xxxx):")
+        main_layout.addWidget(instruction_label)
+
+        # Input fields (split into two 4-character boxes)
+        input_layout = QHBoxLayout()
+        self.tid_part1 = QLineEdit(self)
+        self.tid_part2 = QLineEdit(self)
+
+        # Set max length for each part to 4 characters
+        self.tid_part1.setMaxLength(4)
+        self.tid_part2.setMaxLength(4)
+
+        # Set input fields to uppercase automatically
+        self.tid_part1.textChanged.connect(self.to_uppercase)
+        self.tid_part2.textChanged.connect(self.to_uppercase)
+
+        # Automatically move focus from part1 to part2 when part1 is full
+        self.tid_part1.textChanged.connect(self.auto_focus_part2)
+
+        # Add to the input layout
+        input_layout.addWidget(self.tid_part1)
+        input_layout.addWidget(self.tid_part2)
+
+        main_layout.addLayout(input_layout)
+
+        # Search button
+        self.search_button = QPushButton("Search", self)
+        self.search_button.clicked.connect(self.on_search)
+        main_layout.addWidget(self.search_button)
+
+        # Results display area
+        self.result_display = QTextEdit(self)
+        self.result_display.setReadOnly(True)
+        main_layout.addWidget(self.result_display)
+
+        self.setLayout(main_layout)
+
+    def to_uppercase(self):
+        sender = self.sender()
+        sender.setText(sender.text().upper())  # Convert the text to uppercase
+
+    def auto_focus_part2(self):
+        # Automatically shift focus to part2 when part1 is full (4 characters)
+        if len(self.tid_part1.text()) == 4:
+            self.tid_part2.setFocus()
+
+    def on_search(self):
+        part1 = self.tid_part1.text().strip()
+        part2 = self.tid_part2.text().strip()
+
+        # Ensure both parts are 4 characters
+        if len(part1) == 4 and len(part2) == 4:
+            full_tid = part1 + part2
+            result = self.search_tid(full_tid)
+            self.result_display.setText(result)
+        else:
+            self.result_display.setText("Please enter 8 characters, split into two 4-character parts.")
+
+    def search_tid(self, tid):
+        # Check if the data is loaded properly
+        if self.data is None:
+            return "Error: No data available to search."
+
+        # Decode the TID using the extract_values function
+        X, S, F, MDID_binary, MDID_hex, TMN_binary, TMN_hex = extract_values(tid)
+
+        # Display the decoded values inside the window
+        decoded_info = (f"Xtid bit: {X}, Security bit: {S}, File bit: {F}\n"
+        # XTID indicator bit; determines if a tag implements Extended Tag Identification
+        # security indicator bit; determines if a tag supports the Authenticate and/or Challenge commands
+        # file indicator bit; determines if a tag supports the FileOpen command
+        
+                        f"MDID: {MDID_binary} (binary), {MDID_hex} (hex)\n"
+                        f"TMN: {TMN_binary} (binary), {TMN_hex} (hex)")
+
+        # Always show the decoded info
+        result = decoded_info + "\n\n"
+
+        # Search for the MDID in the data (using binary MDID for comparison)
+        try:
+            for designer in self.data.get('registeredMaskDesigners', []):
+                if designer['mdid'] == MDID_binary:  # Compare MDID in binary format
+                    result += (f"Manufacturer: {designer['manufacturer']}\n"
+                               f"Manufacturer URL: {designer['manufacturerUrl']}\n\n")
+                    
+                    # Search for the matching chip data
+                    for chip in designer.get('chips', []):
+                        if chip['tmnBinary'] == TMN_binary:
+                            result += (f"Model Name: {chip.get('modelName', 'N/A')}\n\n"
+                                       f"TMN (Hex): {chip['tmnHex']}\n"
+                                       f"TMN (Binary): {chip['tmnBinary']}\n\n"
+                                       f"Product URL: {chip.get('productUrl', 'N/A')}\n\n"
+                                       f"Notes: {chip.get('note', 'N/A')}")
+                            return result
+                    
+                    return result + "No matching TMN found."
+            
+            # If no match is found, return the result with the decoded info
+            return result + "No matching MDID found."
+        except KeyError as e:
+            return f"Error: Missing key in data - {e}"
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    # Load the data
+    data = load_json_data()
+
+    if data:
+        window = SearchWindow(data)
+        window.show()
+        sys.exit(app.exec())
+    else:
+        print("Unable to load data. Exiting...")
