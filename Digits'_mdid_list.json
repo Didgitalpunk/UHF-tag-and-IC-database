@@ -1770,7 +1770,16 @@
       "mdid": "001000110",
       "manufacturer": "Along Star Technology (Hangzhou) Co., Ltd.",
       "manufacturerUrl": "https://www.alongstar.com/",
-      "note": "seems to specialise in wireless sensors. website is just a single page of pictures and text"
+      "note": "seems to specialise in wireless sensors.",
+      "chips": [
+        {
+          "tmnHex": "A10",
+          "tmnBinary": "101000010000",
+          "modelName": "AST010-F",
+          "productUrl": "https://www.alongstar.com/produce_chip/newAST01.html",
+          "note": "temperature sensing chip"
+        }
+      ]
     },
     {
       "mdid": "001000111",
