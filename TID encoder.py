@@ -1,4 +1,4 @@
-# TID encoder V1.0, 1st of march 2025
+# TID encoder V1.1, 5th of march 2025
 # Freya Mutschler
 # Following TDS 2.2
 #
@@ -7,47 +7,62 @@ from PyQt5.QtCore import QRegExp # type: ignore
 from PyQt5.QtGui import QRegExpValidator # type: ignore
 import sys
 
+################################################################################################################################################################################
+########    This code is meant to generate TIDs and XTIDS that strictly follow TDS specs as written by GS1. the version it follows is numbered at line3 in this code.   ######## 
+########    It is worth noting that this code is not meant to output TIDs and XTIDs as they are done by all manufacturers, as some chips kinda do their own things      ########
+########    with regards to TDS specs. G2iM from NXP fpr example does not have the X bit (bit 9) enabled despite having an XTID header, and uses a bit at adress 14h to ########
+########    inform on a config word. this is *far* from the only example. Some chips write data in RFU spaces. Some chips have actual short TIDs, but a load of config  ########
+########    data after the short TID unrelated to the short or XTID info (alien chips for exmple).                                                                      ########
+########                                                                                                                                                                ########
+########    ----------------------------    BE WARNED AND AWARE OF WHAT YOU'RE DOING / USING THIS SOFTWARE FOR.     ------------------------------------------------    ########
+########                                                                                                                                                                ########
+########    For compliance with GS1 TDS specs, all RFU fields that might exist are hardset to all 0s, or any value specified in the TDS, and any field/bits that need   ########
+########    to be set at certain values are (E2(h) prefix for example -- which denotes an EPC TID. others exist such as ISO's E0(h) and E3(h). )                        ########
+################################################################################################################################################################################
+
 class TID_encoder(QWidget):
+
     def __init__(self):
         super().__init__()
         self.XTID_output = ""  # This variable will hold the complete binary output string.
         self.initUI()
 
+
     def initUI(self):
-        self.setGeometry(0, 100, 2000, 800)  # Set window position and size
+        self.setGeometry(0, 100, 2000, 800)     # Set window position (x,y, and size ,x,y) in pixels 
         layout = QVBoxLayout()
 
-        # Create a scrollable area for input groups
-        scroll_area = QScrollArea()
+        scroll_area = QScrollArea()             # Create a scrollable area for input groups. this is only used if you shrink the window to a smaller size really.
         scroll_area.setWidgetResizable(True)
         checkboxes_widget = QWidget()
         checkboxes_layout = QHBoxLayout()
 
-#-------# --- GroupBox 1: Short TID ---
+######### --- GroupBox 1: Short TID ----------# this section has th eoptions to encode the TID, or short TID, i.e. the first eight characters (4 words) of the TID. 
         groupbox_1 = QGroupBox("Short TID")
         groupbox_1_layout = QVBoxLayout()
 
         # Create checkboxes for Group 1
-        self.checkbox1 = QCheckBox("XTID bit")
+        self.checkbox1 = QCheckBox("XTID bit") # normally just called the 'X' bit (for Xtid), renamed in this code for ease of comprehension to XTID bit
         self.checkbox2 = QCheckBox("S")
         self.checkbox3 = QCheckBox("F")
         
-        # MDID and TMN inputs
+        # MDID input
         self.mdid_input = QLineEdit()
         self.mdid_input.setMaxLength(9)
-        self.mdid_input.setPlaceholderText("MDID")
+        self.mdid_input.setPlaceholderText("MDID")  # Mask Designer IDentification, given out by GS1, id value for the manufacturer of the chip (or more correctly, the Designer of the Mask that is used in the lithography process to make the chips)
         binary_regex = QRegExp("^[01]{1,9}$")
         binary_validator = QRegExpValidator(binary_regex)
         self.mdid_input.setValidator(binary_validator)
 
+        # TMN input
         self.tmn_input = QLineEdit()
         self.tmn_input.setMaxLength(3)
-        self.tmn_input.setPlaceholderText("TMN")
+        self.tmn_input.setPlaceholderText("TMN")    # Tag Model Number. this number is defined not by GS1 and some manufacturers use it to determine specific configurations of chips rather than actual models (EM4325 for example)
         hex_regex = QRegExp("^[0-9A-Fa-f]{1,3}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.tmn_input.setValidator(hex_validator)
 
-        # Set fixed widths for visual appearance
+        # Set fixed widths for MDID and TMN input fields
         self.mdid_input.setFixedWidth(self.mdid_input.fontMetrics().horizontalAdvance(" 123456789 "))
         self.tmn_input.setFixedWidth(self.tmn_input.fontMetrics().horizontalAdvance(" 123456789 "))
 
@@ -58,12 +73,12 @@ class TID_encoder(QWidget):
         groupbox_1_layout.addWidget(self.tmn_input)
         groupbox_1.setLayout(groupbox_1_layout)
 
-#-------# --- GroupBox 2: XTID Header and Serial Number ---
+######### --- GroupBox 2: XTID Header and Serial Number ---
         groupbox_2 = QGroupBox("XTID Header and Serial Number")
         groupbox_2_layout = QVBoxLayout()
 
         # Create checkboxes for Group 2 as instance variables
-        self.checkbox6 = QCheckBox("Extended Header Present")
+        self.checkbox6 = QCheckBox("Extended Header Present") # see at the bottom of this def why this checkbox is set to 0 and locked by default.
         self.checkbox7 = QCheckBox("Lock bit segment")
         self.checkbox8 = QCheckBox("Optional Command Support Segment Present")
         self.checkbox9 = QCheckBox("BlockWrite and BlockErase Segment Present")
@@ -78,16 +93,16 @@ class TID_encoder(QWidget):
         hex_regex = QRegExp("^[01]{1,3}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Serial_length_input.setValidator(hex_validator)
-        self.Serial_length_input.setFixedWidth(self.Serial_length_input.fontMetrics().horizontalAdvance(" serial number length "))
+        self.Serial_length_input.setFixedWidth(self.Serial_length_input.fontMetrics().horizontalAdvance(" serial number length ")) # set field width big enough to display the informative text
 
         self.Serial_value_input = QLineEdit()
-        self.Serial_value_input.setMaxLength(0)  # Will be updated dynamically
+        self.Serial_value_input.setMaxLength(0)  # Will be updated dynamically depending on the serial number length calculated from the previous input field.
         self.Serial_value_input.setPlaceholderText("Serial number data")
         hex_regex = QRegExp("^[0-9A-Fa-f]+$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Serial_value_input.setValidator(hex_validator)
         self.Serial_value_input.setFixedWidth(self.Serial_value_input.fontMetrics().horizontalAdvance(" 00112233445566778899AABBCCDDEEFF0011 "))
-        self.Serial_value_input.setEnabled(False)
+        self.Serial_value_input.setEnabled(False) # disable the field until the Serial number length input is no longer 000
 
         groupbox_2_layout.addWidget(self.checkbox8)
         groupbox_2_layout.addWidget(self.checkbox9)
@@ -98,7 +113,7 @@ class TID_encoder(QWidget):
         groupbox_2_layout.addWidget(self.Serial_value_input)
         groupbox_2.setLayout(groupbox_2_layout)
 
-#-------# --- GroupBox 3: OPTIONAL COMMANDS ---
+######### --- GroupBox 3: OPTIONAL COMMANDS ---
         groupbox_3 = QGroupBox("Optional Commands")
         groupbox_3_layout = QVBoxLayout()
 
@@ -135,11 +150,11 @@ class TID_encoder(QWidget):
         groupbox_3.setLayout(groupbox_3_layout)
 
 
-#-------# --- GroupBox 4: Block Write and Block Erase ---
+######### --- GroupBox 4: Block Write and Block Erase --- # most often it seems that blockWrite and BlockErase have the same values, however this isn't a requirement.
         groupbox_4 = QGroupBox("Block Write and Block Erase")
         groupbox_4_layout = QVBoxLayout()
         
-        # --- 4.1 Block Write
+    ######### --- 4.1 Block Write
         groupbox_4_1 = QGroupBox("Block Write")
         groupbox_4_1_layout = QVBoxLayout()
         
@@ -181,7 +196,7 @@ class TID_encoder(QWidget):
         groupbox_4_1_layout.addWidget(self.checkbox24)
         groupbox_4_1.setLayout(groupbox_4_1_layout)
 
-        # --- 4.2 Block Erase
+    ######## --- 4.2 Block Erase
         groupbox_4_2 = QGroupBox("Block Erase")
         groupbox_4_2_layout = QVBoxLayout()
         
@@ -228,8 +243,7 @@ class TID_encoder(QWidget):
         groupbox_4.setLayout(groupbox_4_layout)
 
 
-#-------#--- Groupbox 5: user memory size and permalock block size
-        
+######### --- Groupbox 5: user memory size and permalock block size
         groupbox_5 = QGroupBox(f"USER mem and block permalock")
         groupbox_5_layout = QVBoxLayout()
 
@@ -254,7 +268,7 @@ class TID_encoder(QWidget):
         groupbox_5.setLayout(groupbox_5_layout)
 
 
-#-------# --- GroupBox 6: Lock bit segment ---
+######### --- GroupBox 6: Lock bit segment ---
         groupbox_6 = QGroupBox("Lock bit segment")
         groupbox_6_layout = QVBoxLayout()
 
@@ -277,8 +291,11 @@ class TID_encoder(QWidget):
 
 
 
-        # set fixed widths 
-        groupbox_1.setMaximumWidth(150)
+
+########---- groupbox formating
+########
+        # set fixed/max widths for each box groups
+        groupbox_1.setMaximumWidth(150) # for now only this field has a max width, since the inputs it has are very small. that leaves real estate available for the other boxes
         #groupbox_2.setMaximumWidth(300)
         #groupbox_3.setMaximumWidth(300)
         #groupbox_4.setMaximumWidth(300)
@@ -299,7 +316,8 @@ class TID_encoder(QWidget):
         layout.addWidget(scroll_area)
 
 
-########---- Create two output fields:, one binary, one hex
+
+########---- Create two output fields: one binary, one hex
 ########
         self.output_field = QPlainTextEdit()
         self.output_field.setReadOnly(True)
@@ -314,7 +332,9 @@ class TID_encoder(QWidget):
         layout.addWidget(self.hex_output_field)
 
         self.setLayout(layout)
-        self.setWindowTitle("TID_encoder")
+        self.setWindowTitle("TID encoder") # window name
+
+
 
 ########---- Connect signals so they update the output: ----
 ########
@@ -365,9 +385,22 @@ class TID_encoder(QWidget):
         for cb in self.group6_checkboxes:
             cb.stateChanged.connect(self.update_output)
 
-        
+
+
+######## ---- lock and set checkboxes that should be locked and/or set to checked if need be
+########
+        self.checkbox6.setChecked(False) # []Extended header present (checkbox 6) is set to 0 by default, 1 is RFU to indicate an exended XTID header in the future
+        self.checkbox6.setEnabled(False) 
+
+######## update the output once at the start of the program
+        self.update_output()
+
+
+
+######### ---- max value caps for certain inputs
+#########
     def check_and_cap_length_255(self, line_edit):
-        # If the text is not empty, convert it to an integer and cap at 255.
+        # If the text is not empty, convert it to an integer and cap at 255. 255(10) = 1111 1111 (2) = FF(h)
         text = line_edit.text()
         if text:
             value = int(text)
@@ -378,7 +411,7 @@ class TID_encoder(QWidget):
                 line_edit.blockSignals(False)
     
     def check_and_cap_length_65535(self, line_edit):
-        # If the text is not empty, convert it to an integer and cap at 65535.
+        # If the text is not empty, convert it to an integer and cap at 65535. 65535(10) = 1111 1111 1111 1111(2) = FFFF(h)
         text = line_edit.text()
         if text:
             value = int(text)
@@ -403,26 +436,26 @@ class TID_encoder(QWidget):
 
         # 1. Group 1 bits: for each checkbox in group 1, "1" if checked, "0" if not.
         group1_bits = (
-            ("1" if self.checkbox1.isChecked() else "0") +
-            ("1" if self.checkbox2.isChecked() else "0") +
-            ("1" if self.checkbox3.isChecked() else "0")
+            ("1" if self.checkbox1.isChecked() else "0") +  # Xtid bit
+            ("1" if self.checkbox2.isChecked() else "0") +  # F bit
+            ("1" if self.checkbox3.isChecked() else "0")    # S bit
         )
         final_output += group1_bits
-        XTID_length += 3
+        XTID_length += 3    # keep track of the amount of bits that are added throughout the operations to make sure there aren't any mistakes, and to inform the user at the end
 
-        # 2. MDID: pad its contents to 9 characters (right-filled with zeros).
+        # 2. MDID: pad its contents to 9 characters and add to the output.
         mdid_text = self.mdid_input.text()
         mdid_padded = mdid_text.ljust(9, '0')
         final_output += mdid_padded
         XTID_length += 9
 
-        # 3. TMN: pad to 3 characters using ljust, then convert from hex to a 12-bit binary string.
+        # 3. TMN: pad to 3 characters, convert from hex to a 12-bit binary string, and add to output.
         tmn_text = self.tmn_input.text().ljust(3, '0')
         tmn_binary = format(int(tmn_text, 16), '012b')
         final_output += tmn_binary
         XTID_length += 12
 
-        # 4. Process Group 2 and Serial fields only if []XTID (checkbox1) is checked.
+        # 4. Process Group 2 and Serial fields only if []XTID (checkbox1) is checked. if it's not checked, none of the following groups will be processed. note that some XTIDs (EM4325)
         if self.checkbox1.isChecked():
             # 4.1 Add Serial Number fields.   Serial number length: if empty, default to "0". Then pad to 3 characters.
             serial_length_text = self.Serial_length_input.text()
@@ -434,14 +467,14 @@ class TID_encoder(QWidget):
 
             # 4.2 Group 2 bits: for each checkbox in group 2, "1" if checked, "0" if not.
             group2_bits = (
-                ("1" if self.checkbox10.isChecked() else "0") +
-                ("1" if self.checkbox9.isChecked() else "0") +
-                ("1" if self.checkbox8.isChecked() else "0") +
-                ("1" if self.checkbox7.isChecked() else "0")
+                ("1" if self.checkbox10.isChecked() else "0") + # User Memory and Block Perma Lock Segment Present
+                ("1" if self.checkbox9.isChecked() else "0") +  # BlockWrite and BlockErase Segment Present
+                ("1" if self.checkbox8.isChecked() else "0") +  # Optional Command Support Segment Present
+                ("1" if self.checkbox7.isChecked() else "0")    # Lock bit segment
             )
             final_output += group2_bits
             final_output += ("00000000")  # XTID HEADER RFU, 8 bits
-            final_output += ("1" if self.checkbox6.isChecked() else "0")
+            final_output += ("1" if self.checkbox6.isChecked() else "0") # Extended header present. see at the bottom of `def __init__(self):` why this checkbox is set to 0 and locked by default.
 
             XTID_length += 13
 
@@ -467,14 +500,14 @@ class TID_encoder(QWidget):
             if self.checkbox8.isChecked(): #### OPTIONAL COMMANDS ####
                 final_output += ("000")     # Optional Commands RFU
                 group3_bits = (
-                ("1" if self.checkbox21.isChecked() else "0") +
-                ("1" if self.checkbox20.isChecked() else "0") +
-                ("1" if self.checkbox19.isChecked() else "0") +
-                ("1" if self.checkbox18.isChecked() else "0") +
-                ("1" if self.checkbox17.isChecked() else "0") +
-                ("1" if self.checkbox16.isChecked() else "0") +
-                ("1" if self.checkbox15.isChecked() else "0") +
-                ("1" if self.checkbox14.isChecked() else "0")
+                ("1" if self.checkbox21.isChecked() else "0") + # Block PermaLock support
+                ("1" if self.checkbox20.isChecked() else "0") + # Block Write support
+                ("1" if self.checkbox19.isChecked() else "0") + # Block Erase support
+                ("1" if self.checkbox18.isChecked() else "0") + # Phase Jitter Modulation (PJM) support
+                ("1" if self.checkbox17.isChecked() else "0") + # Auto UMI support
+                ("1" if self.checkbox16.isChecked() else "0") + # Seperate lockbits
+                ("1" if self.checkbox15.isChecked() else "0") + # Access
+                ("1" if self.checkbox14.isChecked() else "0")   # recom support
                 )
                 final_output += group3_bits
                 final_output += self.EPC_length_input.text().ljust(5, '0')
@@ -524,7 +557,7 @@ class TID_encoder(QWidget):
 
             # 9. Process group 5 only if []User Memory and Block Perma Lock Segment Present (checkbox10) is checked
             if self.checkbox10.isChecked():
-                USER_memory_size = self.USER_memory_size.text().rjust(5 , '0') #decimal
+                USER_memory_size = self.USER_memory_size.text().rjust(5 , '0') # decimal; USER memory size : number of 16 bit words in USER memory
                 if int(USER_memory_size) > 65535 :
                     USER_memory_size = "65535"
                 final_output += format(int(USER_memory_size, 10), '016b')
@@ -532,7 +565,7 @@ class TID_encoder(QWidget):
                 if self.checkbox8.isChecked() and (not self.checkbox21.isChecked()):
                     final_output += "0000000000000000"
                 else:
-                    Block_permalock_size = self.Block_permalock_size.text().rjust(5 , '0') #decimal
+                    Block_permalock_size = self.Block_permalock_size.text().rjust(5 , '0') # decimal; If non-zero, the size in words of each block that may be block permalocked. zero does not mean it isn't supported, just not described in here.
                     if int(Block_permalock_size) > 65535 :
                         Block_permalock_size = "65535"
                     final_output += format(int(Block_permalock_size, 10), '016b')
@@ -547,16 +580,19 @@ class TID_encoder(QWidget):
             final_output += "0000000000"
 
 
-        # Update outputs.
+######### --- Update outputs
+#########
+        #update binary ouptut
         self.XTID_output = final_output
         self.output_field.setPlainText(f"{self.XTID_output}\n"
-                                       f"amount of bits: {len(final_output)}\n")
+                                       f"amount of bits: {len(final_output)}\n") # add info on the amount of bits in the output
 
         # Convert the complete binary output to hexadecimal.
         hex_width = (len(final_output)) // 4
         hex_output = format(int(final_output, 2), '0{}X'.format(hex_width))
         self.hex_output_field.setPlainText(f"{hex_output}\n"
-                                           f"number of bytes: {len(hex_output)} ----- number of words: {int(len(hex_output)/2)}\n")
+                                           f"number of bytes: {len(hex_output)}\n"          # add info on the amount of bytes in the output
+                                           f"number of words: {int(len(hex_output)/2)}\n")  # add info on the amount of words (2 bytes) in the output
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
