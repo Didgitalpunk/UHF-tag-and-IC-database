@@ -1,4 +1,4 @@
-# TID encoder V2.0, 5th of march 2025 (if changed, please search for "TID encoder" and change the value for the window name as well )
+# TID encoder V2.0, 11th of march 2025 (if changed, please search for "TID encoder" and change the value for the window name as well )
 # Freya Mutschler
 # Following TDS 2.2
 #
