@@ -1,11 +1,13 @@
-# TID encoder V1.1, 5th of march 2025
+# TID encoder V2.0, 5th of march 2025 (if changed, please search for "TID encoder" and change the value for the window name as well )
 # Freya Mutschler
 # Following TDS 2.2
 #
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QCheckBox, QLineEdit, QScrollArea, QGroupBox, QHBoxLayout, QPlainTextEdit # type: ignore
+from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QCheckBox, QLineEdit, QScrollArea, QGroupBox, QHBoxLayout, QPlainTextEdit, QComboBox, QLabel)
 from PyQt5.QtCore import QRegExp # type: ignore
 from PyQt5.QtGui import QRegExpValidator # type: ignore
 import sys
+import re
+import json  # for loading JSON options
 
 ################################################################################################################################################################################
 ########    This code is meant to generate TIDs and XTIDS that strictly follow TDS specs as written by GS1. the version it follows is numbered at line3 in this code.   ######## 
@@ -20,6 +22,26 @@ import sys
 ########    to be set at certain values are (E2(h) prefix for example -- which denotes an EPC TID. others exist such as ISO's E0(h) and E3(h). )                        ########
 ################################################################################################################################################################################
 
+
+#### JSON file opening and removal of non-printable characters
+# Remove non-printable characters except spaces, newlines, and tabs
+def clean_json_data(raw_data):
+    return re.sub(r'[\x00-\x1F\x7F-\x9F]', '', raw_data)
+
+# Load cleaned-up JSON data
+def load_json_data():
+    try:
+        with open("Digits'_mdid_list.json", "r", encoding="utf-8") as file:
+            raw_data = file.read()
+            cleaned_data = clean_json_data(raw_data)
+            data = json.loads(cleaned_data)
+            print("Data loaded successfully")
+            return data
+    except Exception as e:
+        print(f"ERROR decoding the JSON data: {e}")
+        return None
+
+
 class TID_encoder(QWidget):
 
     def __init__(self):
@@ -27,58 +49,73 @@ class TID_encoder(QWidget):
         self.XTID_output = ""  # This variable will hold the complete binary output string.
         self.initUI()
 
-
     def initUI(self):
-        self.setGeometry(0, 100, 2000, 800)     # Set window position (x,y, and size ,x,y) in pixels 
+        self.setGeometry(0, 100, 2000, 800)     # Set window position (x,y) and size (width, height) in pixels 
         layout = QVBoxLayout()
 
-        scroll_area = QScrollArea()             # Create a scrollable area for input groups. this is only used if you shrink the window to a smaller size really.
+        scroll_area = QScrollArea()             # Create a scrollable area for input groups.
         scroll_area.setWidgetResizable(True)
         checkboxes_widget = QWidget()
         checkboxes_layout = QHBoxLayout()
 
-######### --- GroupBox 1: Short TID ----------# this section has th eoptions to encode the TID, or short TID, i.e. the first eight characters (4 words) of the TID. 
+    ######## --- GroupBox 1: Short TID ----------
         groupbox_1 = QGroupBox("Short TID")
         groupbox_1_layout = QVBoxLayout()
 
         # Create checkboxes for Group 1
-        self.checkbox1 = QCheckBox("XTID bit") # normally just called the 'X' bit (for Xtid), renamed in this code for ease of comprehension to XTID bit
+        self.checkbox1 = QCheckBox("XTID bit")
         self.checkbox2 = QCheckBox("S")
         self.checkbox3 = QCheckBox("F")
         
+        # --- New: Add dropdown for MDID options ---
+        self.mdid_dropdown = QComboBox()
+        self.mdid_dropdown.setToolTip("Select a manufacturer")
+        mdid_label = QLabel("Chip Manufacturer:")
+
         # MDID input
         self.mdid_input = QLineEdit()
         self.mdid_input.setMaxLength(9)
-        self.mdid_input.setPlaceholderText("MDID")  # Mask Designer IDentification, given out by GS1, id value for the manufacturer of the chip (or more correctly, the Designer of the Mask that is used in the lithography process to make the chips)
+        self.mdid_input.setPlaceholderText("MDID")
         binary_regex = QRegExp("^[01]{1,9}$")
         binary_validator = QRegExpValidator(binary_regex)
         self.mdid_input.setValidator(binary_validator)
+        self.mdid_input.setFixedWidth(self.mdid_input.fontMetrics().horizontalAdvance(" 123456789 "))
+
+        # --- New: Add dropdown for TMN options ---
+        self.tmn_dropdown = QComboBox()
+        self.tmn_dropdown.setToolTip("Select a chip model")
+        tmn_label = QLabel("chip model:")
 
         # TMN input
         self.tmn_input = QLineEdit()
         self.tmn_input.setMaxLength(3)
-        self.tmn_input.setPlaceholderText("TMN")    # Tag Model Number. this number is defined not by GS1 and some manufacturers use it to determine specific configurations of chips rather than actual models (EM4325 for example)
+        self.tmn_input.setPlaceholderText("TMN")
         hex_regex = QRegExp("^[0-9A-Fa-f]{1,3}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.tmn_input.setValidator(hex_validator)
-
-        # Set fixed widths for MDID and TMN input fields
-        self.mdid_input.setFixedWidth(self.mdid_input.fontMetrics().horizontalAdvance(" 123456789 "))
         self.tmn_input.setFixedWidth(self.tmn_input.fontMetrics().horizontalAdvance(" 123456789 "))
 
+        # Load dropdown options from the JSON file
+        self.load_options()
+
+        # Add widgets to GroupBox 1 layout
         groupbox_1_layout.addWidget(self.checkbox1)
         groupbox_1_layout.addWidget(self.checkbox2)
         groupbox_1_layout.addWidget(self.checkbox3)
+        groupbox_1_layout.addWidget(mdid_label)
+        groupbox_1_layout.addWidget(self.mdid_dropdown)
         groupbox_1_layout.addWidget(self.mdid_input)
+        groupbox_1_layout.addWidget(tmn_label)
+        groupbox_1_layout.addWidget(self.tmn_dropdown)
         groupbox_1_layout.addWidget(self.tmn_input)
         groupbox_1.setLayout(groupbox_1_layout)
 
-######### --- GroupBox 2: XTID Header and Serial Number ---
+    ######## --- GroupBox 2: XTID Header and Serial Number ---
         groupbox_2 = QGroupBox("XTID Header and Serial Number")
         groupbox_2_layout = QVBoxLayout()
 
         # Create checkboxes for Group 2 as instance variables
-        self.checkbox6 = QCheckBox("Extended Header Present") # see at the bottom of this def why this checkbox is set to 0 and locked by default.
+        self.checkbox6 = QCheckBox("Extended Header Present")
         self.checkbox7 = QCheckBox("Lock bit segment")
         self.checkbox8 = QCheckBox("Optional Command Support Segment Present")
         self.checkbox9 = QCheckBox("BlockWrite and BlockErase Segment Present")
@@ -93,16 +130,16 @@ class TID_encoder(QWidget):
         hex_regex = QRegExp("^[01]{1,3}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Serial_length_input.setValidator(hex_validator)
-        self.Serial_length_input.setFixedWidth(self.Serial_length_input.fontMetrics().horizontalAdvance(" serial number length ")) # set field width big enough to display the informative text
+        self.Serial_length_input.setFixedWidth(self.Serial_length_input.fontMetrics().horizontalAdvance(" serial number length "))
 
         self.Serial_value_input = QLineEdit()
-        self.Serial_value_input.setMaxLength(0)  # Will be updated dynamically depending on the serial number length calculated from the previous input field.
+        self.Serial_value_input.setMaxLength(0)  # Will be updated dynamically
         self.Serial_value_input.setPlaceholderText("Serial number data")
         hex_regex = QRegExp("^[0-9A-Fa-f]+$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Serial_value_input.setValidator(hex_validator)
         self.Serial_value_input.setFixedWidth(self.Serial_value_input.fontMetrics().horizontalAdvance(" 00112233445566778899AABBCCDDEEFF0011 "))
-        self.Serial_value_input.setEnabled(False) # disable the field until the Serial number length input is no longer 000
+        self.Serial_value_input.setEnabled(False)
 
         groupbox_2_layout.addWidget(self.checkbox8)
         groupbox_2_layout.addWidget(self.checkbox9)
@@ -113,7 +150,7 @@ class TID_encoder(QWidget):
         groupbox_2_layout.addWidget(self.Serial_value_input)
         groupbox_2.setLayout(groupbox_2_layout)
 
-######### --- GroupBox 3: OPTIONAL COMMANDS ---
+    ######## --- GroupBox 3: OPTIONAL COMMANDS ---
         groupbox_3 = QGroupBox("Optional Commands")
         groupbox_3_layout = QVBoxLayout()
 
@@ -124,7 +161,6 @@ class TID_encoder(QWidget):
         hex_validator = QRegExpValidator(hex_regex)
         self.EPC_length_input.setValidator(hex_validator)
         self.EPC_length_input.setFixedWidth(self.EPC_length_input.fontMetrics().horizontalAdvance(" 123456789ABCDEF "))
-
 
         self.checkbox14 = QCheckBox("recom support")
         self.checkbox15 = QCheckBox("Access")
@@ -149,12 +185,11 @@ class TID_encoder(QWidget):
         groupbox_3_layout.addWidget(self.checkbox21)
         groupbox_3.setLayout(groupbox_3_layout)
 
-
-######### --- GroupBox 4: Block Write and Block Erase --- # most often it seems that blockWrite and BlockErase have the same values, however this isn't a requirement.
+    ######## --- GroupBox 4: Block Write and Block Erase ---
         groupbox_4 = QGroupBox("Block Write and Block Erase")
         groupbox_4_layout = QVBoxLayout()
         
-    ######### --- 4.1 Block Write
+    ######## --- 4.1 Block Write
         groupbox_4_1 = QGroupBox("Block Write")
         groupbox_4_1_layout = QVBoxLayout()
         
@@ -168,19 +203,19 @@ class TID_encoder(QWidget):
 
         self.Block_write_EPC_offset_input = QLineEdit()
         self.Block_write_EPC_offset_input.setMaxLength(2)
-        self.Block_write_EPC_offset_input.setPlaceholderText("Block Write EPC offset_input adress (h)")
+        self.Block_write_EPC_offset_input.setPlaceholderText("Block Write EPC offset adress (h)")
         hex_regex = QRegExp("^[0-9A-Fa-f]+$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Block_write_EPC_offset_input.setValidator(hex_validator)
-        self.Block_write_EPC_offset_input.setFixedWidth(self.Block_write_EPC_offset_input.fontMetrics().horizontalAdvance(" Block Write EPC offset_input adress (h) "))
+        self.Block_write_EPC_offset_input.setFixedWidth(self.Block_write_EPC_offset_input.fontMetrics().horizontalAdvance(" Block Write EPC offset adress (h) "))
 
         self.Block_write_USER_offset_input = QLineEdit()
         self.Block_write_USER_offset_input.setMaxLength(2)
-        self.Block_write_USER_offset_input.setPlaceholderText("Block Write USER offset_input adress (h)")
+        self.Block_write_USER_offset_input.setPlaceholderText("Block Write USER offset adress (h)")
         hex_regex = QRegExp("^[0-9A-Fa-f]+$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Block_write_USER_offset_input.setValidator(hex_validator)
-        self.Block_write_USER_offset_input.setFixedWidth(self.Block_write_USER_offset_input.fontMetrics().horizontalAdvance(" Block Write USER offset_input adress (h) "))
+        self.Block_write_USER_offset_input.setFixedWidth(self.Block_write_USER_offset_input.fontMetrics().horizontalAdvance(" Block Write USER offset adress (h) "))
 
         self.checkbox22 = QCheckBox("Variable size Block Write")
         self.checkbox23 = QCheckBox("Block Write EPC address alignment")
@@ -242,14 +277,13 @@ class TID_encoder(QWidget):
         groupbox_4_layout.addWidget(groupbox_4_2)
         groupbox_4.setLayout(groupbox_4_layout)
 
-
-######### --- Groupbox 5: user memory size and permalock block size
-        groupbox_5 = QGroupBox(f"USER mem and block permalock")
+    ######## --- Groupbox 5: USER mem and block permalock ---
+        groupbox_5 = QGroupBox("USER mem and block permalock")
         groupbox_5_layout = QVBoxLayout()
 
         self.USER_memory_size = QLineEdit()
         self.USER_memory_size.setMaxLength(5)
-        self.USER_memory_size.setPlaceholderText("USER memory size") # number of 16 bit words in USER memory
+        self.USER_memory_size.setPlaceholderText("USER memory size")
         hex_regex = QRegExp("^[0-9]{1,5}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.USER_memory_size.setValidator(hex_validator)
@@ -257,7 +291,7 @@ class TID_encoder(QWidget):
 
         self.Block_permalock_size = QLineEdit()
         self.Block_permalock_size.setMaxLength(5)
-        self.Block_permalock_size.setPlaceholderText("Block permalock block size") # If non-zero, the size in words of each block that may be block permalocked. zero does not mean it isn't supported, just not described in here.
+        self.Block_permalock_size.setPlaceholderText("Block permalock block size")
         hex_regex = QRegExp("^[0-9]{1,5}$")
         hex_validator = QRegExpValidator(hex_regex)
         self.Block_permalock_size.setValidator(hex_validator)
@@ -267,8 +301,7 @@ class TID_encoder(QWidget):
         groupbox_5_layout.addWidget(self.Block_permalock_size)
         groupbox_5.setLayout(groupbox_5_layout)
 
-
-######### --- GroupBox 6: Lock bit segment ---
+    ######## --- GroupBox 6: Lock bit segment ---
         groupbox_6 = QGroupBox("Lock bit segment")
         groupbox_6_layout = QVBoxLayout()
 
@@ -289,20 +322,11 @@ class TID_encoder(QWidget):
         groupbox_6_layout.addWidget(self.checkbox33)
         groupbox_6.setLayout(groupbox_6_layout)
 
-
-
-
-########---- groupbox formating
-########
-        # set fixed/max widths for each box groups
-        groupbox_1.setMaximumWidth(150) # for now only this field has a max width, since the inputs it has are very small. that leaves real estate available for the other boxes
-        #groupbox_2.setMaximumWidth(300)
-        #groupbox_3.setMaximumWidth(300)
-        #groupbox_4.setMaximumWidth(300)
-        #groupbox_5.setMaximumWidth(300)
-        #groupbox_6.setMaximumWidth(300)
-
-
+######## ---- GroupBox formatting
+        #set max width if needed
+        groupbox_1.setMaximumWidth(350)
+        groupbox_5.setMaximumWidth(200)
+        # Additional groupbox width adjustments can be applied as needed.
 
         # Add all group boxes to the horizontal layout
         checkboxes_layout.addWidget(groupbox_1)
@@ -315,10 +339,7 @@ class TID_encoder(QWidget):
         scroll_area.setWidget(checkboxes_widget)
         layout.addWidget(scroll_area)
 
-
-
-########---- Create two output fields: one binary, one hex
-########
+        ########---- Create two output fields: one binary, one hex
         self.output_field = QPlainTextEdit()
         self.output_field.setReadOnly(True)
         self.output_field.setLineWrapMode(self.output_field.WidgetWidth)
@@ -332,23 +353,22 @@ class TID_encoder(QWidget):
         layout.addWidget(self.hex_output_field)
 
         self.setLayout(layout)
-        self.setWindowTitle("TID encoder") # window name
+        self.setWindowTitle("TID encoder V2.0") # set window name
 
-
-
-########---- Connect signals so they update the output: ----
-########
-        # Connect signals for group 1 checkboxes and inputs.
+        ########---- Connect signals to update output ----
+        # Group 1 signals
         self.checkbox1.stateChanged.connect(self.update_output)
         self.checkbox2.stateChanged.connect(self.update_output)
         self.checkbox3.stateChanged.connect(self.update_output)
         self.mdid_input.textChanged.connect(self.update_output)
         self.tmn_input.textChanged.connect(self.update_output)
+        # Connect dropdown signals if they affect output:
+        self.mdid_dropdown.currentIndexChanged.connect(self.update_output)
+        self.tmn_dropdown.currentIndexChanged.connect(self.update_output)
 
         # Connect signals for group 2 checkboxes.
         for cb in self.group2_checkboxes:
             cb.stateChanged.connect(self.update_output)
-        # Connect signals for serial number inputs.
         self.Serial_length_input.textChanged.connect(self.update_output)
         self.Serial_value_input.textChanged.connect(self.update_output)
 
@@ -357,14 +377,14 @@ class TID_encoder(QWidget):
             cb.stateChanged.connect(self.update_output)
         self.EPC_length_input.textChanged.connect(self.update_output)
 
-        # Connect signals for group 4.1 checkboxes.
+        # Connect signals for group 4.1
         self.Block_write_length_input.textChanged.connect(self.update_output)
         self.Block_write_EPC_offset_input.textChanged.connect(self.update_output)
         self.Block_write_USER_offset_input.textChanged.connect(self.update_output)
         for cb in self.group4_1_checkboxes:
             cb.stateChanged.connect(self.update_output)
 
-        # Connect signals for group 4.2 checkboxes.
+        # Connect signals for group 4.2
         self.Block_erase_length_input.textChanged.connect(self.update_output)
         self.Block_erase_EPC_offset_input.textChanged.connect(self.update_output)
         self.Block_erase_USER_offset_input.textChanged.connect(self.update_output)
@@ -374,10 +394,9 @@ class TID_encoder(QWidget):
         self.Block_write_length_input.textChanged.connect(lambda: self.check_and_cap_length_255(self.Block_write_length_input))
         self.Block_erase_length_input.textChanged.connect(lambda: self.check_and_cap_length_255(self.Block_erase_length_input))
 
-        # connect signals for group 5 fields
+        # Connect signals for group 5 fields
         self.USER_memory_size.textChanged.connect(self.update_output)
         self.Block_permalock_size.textChanged.connect(self.update_output)
-
         self.USER_memory_size.textChanged.connect(lambda: self.check_and_cap_length_65535(self.USER_memory_size))
         self.Block_permalock_size.textChanged.connect(lambda: self.check_and_cap_length_65535(self.Block_permalock_size))
 
@@ -385,15 +404,91 @@ class TID_encoder(QWidget):
         for cb in self.group6_checkboxes:
             cb.stateChanged.connect(self.update_output)
 
+        ######## ---- Lock and set checkboxes as needed
+        self.checkbox6.setChecked(False)
+        self.checkbox6.setEnabled(False)
 
+        # Connect signals to update output and TMN options.
+        self.mdid_input.textChanged.connect(self.update_output)
+        self.tmn_input.textChanged.connect(self.update_output)
+        self.mdid_dropdown.currentIndexChanged.connect(lambda index: self.update_tmn_options())
+        self.tmn_dropdown.currentIndexChanged.connect(self.update_output)
+        self.mdid_dropdown.currentIndexChanged.connect(self.update_mdid_input)
+        self.tmn_dropdown.currentIndexChanged.connect(self.update_tmn_input)
+        # (Other signal connections remain unchanged)
 
-######## ---- lock and set checkboxes that should be locked and/or set to checked if need be
-########
-        self.checkbox6.setChecked(False) # []Extended header present (checkbox 6) is set to 0 by default, 1 is RFU to indicate an exended XTID header in the future
-        self.checkbox6.setEnabled(False) 
-
-######## update the output once at the start of the program
         self.update_output()
+
+
+######## ---- JSON file item fetching
+########
+    def load_options(self):
+        """
+        Load dropdown options from the JSON file "Digits'_mdid_list.json".
+        For the MDID combo box, display the designer's 'manufacturer' and return its 'mdid binary'.
+        """
+        data = load_json_data()
+        self.mdid_dropdown.addItem("")      # Blank option at the top
+        if data is None:
+            return
+
+        self.json_data = data               # Store the JSON data for later use.
+        designers = data.get("registeredMaskDesigners", [])
+        
+        for designer in designers:          # Populate MDID dropdown
+            manufacturer = designer.get("manufacturer", "Unknown Manufacturer")
+            mdid = designer.get("mdid", "")
+            self.mdid_dropdown.addItem(manufacturer, mdid)
+        
+        self.update_tmn_options()           # Update TMN options based on the currently selected MDID.
+
+
+    def update_mdid_input(self):
+        selected_mdid = self.mdid_dropdown.currentData()  # Get MDID binary
+        if selected_mdid:
+            self.mdid_input.setText(selected_mdid)
+            self.mdid_input.setDisabled(True)  # Disable input field
+        else:
+            self.mdid_input.clear()  # Clear if no manufacturer selected
+            self.mdid_input.setDisabled(False)  # Enable input field
+
+
+    def update_tmn_options(self):
+        """
+        Update the TMN dropdown to display only chip models for the manufacturer currently selected.
+        """
+        self.tmn_dropdown.clear()
+        self.tmn_dropdown.addItem("User Input")  # Blank option at the top
+        if not self.json_data:
+            return
+        designers = self.json_data.get("registeredMaskDesigners", [])
+        # Get the mdid value of the currently selected manufacturer.
+        current_index = self.mdid_dropdown.currentIndex()
+        current_mdid = self.mdid_dropdown.itemData(current_index)
+
+
+        for designer in designers:
+            if designer.get("mdid") == current_mdid:
+                chips = designer.get("chips", [])
+                if chips:
+                    for chip in chips:
+                        modelName = chip.get("modelName", "Unknown Model")
+                        tmnHex = chip.get("tmnHex", "")
+                        self.tmn_dropdown.addItem(modelName, tmnHex)
+                else:
+                    self.tmn_dropdown.addItem("No chips available", "")
+                break
+    
+
+    def update_tmn_input(self):
+        selected_tmn = self.tmn_dropdown.currentData()  # Get TMN hex from JSON
+        if selected_tmn:
+            self.tmn_input.setText(selected_tmn)
+            self.tmn_input.setDisabled(True)  # Disable input field
+        else:
+            self.tmn_input.clear()  # Clear if no chip selected
+            self.tmn_input.setDisabled(False)  # Enable input field
+
 
 
 
@@ -420,7 +515,6 @@ class TID_encoder(QWidget):
                 line_edit.blockSignals(True)
                 line_edit.setText("65535")
                 line_edit.blockSignals(False)
-
 
 
 
