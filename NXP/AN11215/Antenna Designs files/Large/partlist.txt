@@ -1,0 +1,11 @@
+Partlist
+
+Exported from Large_G2iM+_kit.brd at 12/20/2012 1:57:10 PM
+
+EAGLE Version 5.6.0 Copyright (c) 1988-2009 CadSoft
+
+Part     Value          Package  Library        Position (mm)         Orientation
+
+G2IM+1                  SOT886   NXP_1          (2.5 40.02)           R90
+G2IM+2                  SOT886   NXP_1          (55.38 39.94)         R90
+G2IM+3                  SOT886   NXP_1          (108.42 39.86)        R90

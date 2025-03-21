@@ -1,0 +1,11 @@
+Partlist
+
+Exported from Medium_G2iM+_kit.brd at 12/20/2012 2:11:32 PM
+
+EAGLE Version 5.6.0 Copyright (c) 1988-2009 CadSoft
+
+Part     Value          Package  Library        Position (mm)         Orientation
+
+G2IM+1                  SOT886   NXP_1          (3.2 70.42)           R90
+G2IM+2                  SOT886   NXP_1          (56.08 70.34)         R90
+G2IM+3                  SOT886   NXP_1          (109.12 70.26)        R90
