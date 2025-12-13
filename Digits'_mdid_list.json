@@ -301,6 +301,18 @@
           "note": ""
         },
         {
+          "tmnHex": "913",
+          "tmnBinary": "100100010011",
+          "modelName": "UCODE Guard",
+          "productUrl": "https://www.nxp.com/products/UCODE-GUARD"
+        },
+        {
+          "tmnHex": "915",
+          "tmnBinary": "100100010101",
+          "modelName": "UCODE 9",
+          "productUrl": "https://www.nxp.com/products/SL3S1206FUD2"
+        },
+        {
           "tmnHex": "994",
           "tmnBinary": "100110010100",
           "modelName": "UCODE 8m",
@@ -314,7 +326,7 @@
         },
         {
           "tmnHex": "B06",
-          "tmnBinary": "10110000110",
+          "tmnBinary": "101100000110",
           "modelName": "G2 iL",
           "productUrl": "https://www.nxp.com/docs/en/data-sheet/SL3S1203_1213.pdf",
           "note": ""
@@ -358,8 +370,8 @@
           "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-dna-uhf-tag-ic-for-secure-authentication:SL3S5002N0FUD"
         },
         {
-          "tmnHex": "",
-          "tmnBinary": "",
+          "tmnHex": "897",
+          "tmnBinary": "100010010111",
           "modelName": "UCODE 9xm",
           "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xm-accelerating-industrial-tagging-with-configurable-memory-and-high-performance:UCODE-9xm",
           "note": ""
@@ -367,6 +379,13 @@
         {
           "tmnHex": "A16",
           "tmnBinary": "101000010110",
+          "modelName": "UCODE 9xe",
+          "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xe-ucode-9-with-more-epc-memory:UCODE-9xe",
+          "note": ""
+        },        
+        {
+          "tmnHex": "A96",
+          "tmnBinary": "101010010110",
           "modelName": "UCODE 9xe",
           "productUrl": "https://www.nxp.com/products/rfid-nfc/ucode-rain-rfid-uhf/ucode-9xe-ucode-9-with-more-epc-memory:UCODE-9xe",
           "note": ""
