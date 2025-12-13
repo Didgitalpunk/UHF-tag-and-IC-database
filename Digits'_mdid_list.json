@@ -1,7 +1,7 @@
 {
   "name": "EPC MDID list",
   "publisher": "Digits",
-  "version": "2025-01-27T13:27:00Z",
+  "version": "2025-12-13T15:33:00Z",
   "sourceUrl": "https://www.gs1.org/epcglobal/standards/mdid",
   "email": "MDID@gs1.org",
   "registeredMaskDesigners": [
@@ -1980,7 +1980,7 @@
         }
       ]
     },
-  	{
+    {
       "mdid": "001001100",
       "manufacturer": "Chongqing UCchip InfoTech Co., Ltd",
       "manufacturerUrl": "http://www.ucchip.com"
@@ -1999,6 +1999,27 @@
       "mdid": "001001111",
       "manufacturer": "Guangdong Shixin Microelectronics Technology Co., Ltd.",
       "manufacturerUrl": "https://gdsxwdz.com/"
+    },
+    {
+      "mdid": "001010000",
+	    "manufacturer": "C-Star Technology Co., Ltd.",
+      "manufacturerUrl": "http://cstar-tech.com.cn:99"
+      "chips": [
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "CSC8622",
+          "productUrl": "http://cstar-tech.com.cn:99/csc8622.html",
+          "note": "Temperature sensing chip"
+        },
+        {
+          "tmnHex": "",
+          "tmnBinary": "",
+          "modelName": "CSC8666",
+          "productUrl": "http://cstar-tech.com.cn:99/csc8666.html",
+          "note": ""
+        }
+      ]
     }
   ]
 }
