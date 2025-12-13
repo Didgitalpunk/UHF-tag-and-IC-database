@@ -885,6 +885,126 @@
           "tmnBinary": "000100100011",
           "modelName": "EM4152",
           "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-sense "
+        },
+        {
+          "tmnHex": "150",
+          "tmnBinary": "000101010000",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "151",
+          "tmnBinary": "000101010001",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "152",
+          "tmnBinary": "000101010010",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "153",
+          "tmnBinary": "000101010011",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "154",
+          "tmnBinary": "000101010100",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "155",
+          "tmnBinary": "000101010101",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "156",
+          "tmnBinary": "000101010110",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "157",
+          "tmnBinary": "000101010111",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "158",
+          "tmnBinary": "000101011000",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "159",
+          "tmnBinary": "000101011001",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15A",
+          "tmnBinary": "000101011010",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15B",
+          "tmnBinary": "000101011011",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15C",
+          "tmnBinary": "000101011100",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15D",
+          "tmnBinary": "000101011101",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15E",
+          "tmnBinary": "000101011110",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "15F",
+          "tmnBinary": "000101011111",
+          "modelName": "EM4427",
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo-i-em4427-v11-new "
+        },
+        {
+          "tmnHex": "1F0",
+          "tmnBinary": "000111110000",
+          "modelName": "EM4018",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-air-em4018 "
+        },
+        {
+          "tmnHex": "1F1",
+          "tmnBinary": "000111110001",
+          "modelName": "EM4018",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-air-em4018 "
+        },
+        {
+          "tmnHex": "1F2",
+          "tmnBinary": "000111110010",
+          "modelName": "EM4018",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-air-em4018 "
+        },
+        {
+          "tmnHex": "1F3",
+          "tmnBinary": "000111110011",
+          "modelName": "EM4018",
+          "productUrl": "https://www.emmicroelectronic.com/product/epc-and-uhf-ics/em-aura-air-em4018 "
         }
     	]
     },
