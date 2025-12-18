@@ -645,49 +645,57 @@
           "tmnHex": "0A0",
           "tmnBinary": "000010100000",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A1",
           "tmnBinary": "000010100001",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A2",
           "tmnBinary": "000010100010",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A3",
           "tmnBinary": "000010100011",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A4",
           "tmnBinary": "000010100100",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A5",
           "tmnBinary": "000010100101",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A6",
           "tmnBinary": "000010100110",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0A7",
           "tmnBinary": "000010100111",
           "modelName": "EM4423",
-          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo "
+          "productUrl": "https://www.emmicroelectronic.com/product/nfc-high-frequency-ics/em-echo ",
+          "note": "Dual tech credential, HF/NFC + UHF RFID/RAIN"
         },
         {
           "tmnHex": "0C0",
