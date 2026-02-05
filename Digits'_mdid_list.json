@@ -2047,7 +2047,7 @@
     {
       "mdid": "001010000",
 	    "manufacturer": "C-Star Technology Co., Ltd.",
-      "manufacturerUrl": "http://cstar-tech.com.cn:99"
+      "manufacturerUrl": "http://cstar-tech.com.cn:99",
       "chips": [
         {
           "tmnHex": "",
